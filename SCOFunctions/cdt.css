@@ -1,4 +1,4 @@
-/* $Rev: 6814 $ $Date: 2015-06-17 10:09:16 +0100 (Wed, 17 Jun 2015) $ $Author: jan $ */
+/* $Rev: 6373 $ $Date: 2014-12-10 10:56:11 +0000 (Wed, 10 Dec 2014) $ $Author: jan $ */
 html
 {
 	height:100%;
@@ -45,14 +45,14 @@ h1.withBackground {
     background: url(../common_images/header_background.png) no-repeat 0 0; 
     line-height: 1.7em;
     padding-left: 15px;
-    color: #6192B2;
+    color: #fff;
 }
 
 h1.withBackgroundShort { 
     background: url(../common_images/header_background_short.png) no-repeat 0 0; 
     line-height: 1.7em;
     padding-left: 15px;
-    color: #6192B2;
+    color: #fff;
 }
 
 h2,h3,h4,h5
@@ -993,7 +993,7 @@ color:#ffffff;
 .noteInteract p { padding: 12px 43px 6px 16px !important; }
 .noteShortInteract p { padding: 12px 43px 6px 16px !important; }
 
-.roundedBox { background-color: #ececec; padding: 8px 16px 8px 16px; }
+.roundedBox { background-color: #E9EAEC; padding: 8px 16px 8px 16px; }
 .roundedBox span { display: block; font-weight: bold; padding: 5px 0 5px 0; }
 
 /* QUESTIONS v2 */
@@ -1590,13 +1590,7 @@ display:inline;
 - move freame up 40px
 */
 .goog-te-banner-frame{display:none !important;}
-#screenBody {
-	top:0px !important;
-
-	/* google translate body styles insertion fix eventum #3249 */
-	min-height:1px !important;
-    position:static !important;
-}
+#screenBody{top:0px !important;}
 
 /*Expandable noteboxes*/
 
@@ -1643,10 +1637,10 @@ display:inline;
 
 .expandShort{
 	width: 190px;
-	background: #ececec url(../common_images/notebox_small_bottom.jpg) no-repeat bottom left;
+	background: #daeaef url(../common_images/notebox_small_bottom.jpg) no-repeat bottom left;
 }
 
-.expandShort dt{background: #969696 url(../common_images/notebox_small_top.jpg) no-repeat top left;}
+.expandShort dt{background: #5e93b1 url(../common_images/notebox_small_top.jpg) no-repeat top left;}
 
 
 .expandShort .info_img{left:152px;}
@@ -1656,11 +1650,11 @@ display:inline;
 
 .expandMiddle{
 	width: 240px;
-	background: #ececec url(../common_images/notebox_medium_bottom.jpg) no-repeat bottom left;
+	background: #daeaef url(../common_images/notebox_medium_bottom.jpg) no-repeat bottom left;
 }
 
 .expandMiddle dt{
-  background: #969696 url(../common_images/notebox_medium_top.jpg) no-repeat top left;
+  background: #5e93b1 url(../common_images/notebox_medium_top.jpg) no-repeat top left;
 }
 
 .expandMiddle dd {
@@ -1676,10 +1670,10 @@ display:inline;
 
 .expandLong{
 	width: 330px;
-	background: #ececec url(../common_images/notebox_wide_bottom.jpg) no-repeat bottom left;
+	background: #daeaef url(../common_images/notebox_wide_bottom.jpg) no-repeat bottom left;
 }
 
-.expandLong dt{background: #969696 url(../common_images/notebox_wide_top.jpg) no-repeat top left;}
+.expandLong dt{background: #5e93b1 url(../common_images/notebox_wide_top.jpg) no-repeat top left;}
 
 .expandLong .info_img{left:290px;}
 .expandLong .interact_img{left:290px;}
@@ -1882,3 +1876,9 @@ img#bg { z-index:-1; top:0px; }
     display:none;
     position:absolute;
 }
+
+
+
+
+
+
