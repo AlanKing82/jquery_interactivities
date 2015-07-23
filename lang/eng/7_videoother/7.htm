@@ -7,6 +7,8 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <title>Drag and drop load scripts</title>
 <link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201507061504_9d3cddc375ca68aec3d1075ae212591b" type="text/css" media="screen" />
+</head>
+<body id="screenBody" onload="parent.onFrameLoad();">
 <style>
 
 
@@ -112,7 +114,18 @@ font-weight:bold;
 
 <div style="padding-top: 10px; padding-left: 10px" class="ulDesc">
 <h1>loadExtraScripts</h1>
-<p>Can you click and drag them into the correct order?</p><ul id="sort-list"><li id="2" class="sort">Lather with liquid soap</li><li id="5" class="sort">Dry hygienically with paper towels or air dryer</li><li id="1" class="sort">Wet hands with comfortably hot water</li><li id="3" class="sort">Clean nails with a nail brush</li><li id="4" class="sort">Rinse thoroughly</li></ul><input value="Submit" class="Submit" type="button" /> <div class="cleaner"></div></div><div style="padding-top: 30px; padding-left: 65px; font-size: 12pt" id="correct" class="final_result">Correct. <p>Please continue.</p></div><div style="padding-top: 30px; padding-left: 65px; font-size: 12pt" id="incorrect" class="final_result">Incorrect. <p>Try again.</p></div>
+<p>Can you click and drag them into the correct order?</p>
+
+    <ul id="sort-list">
+    <li id="1" class="sort">Wet hands with comfortably hot water</li>
+    <li id="2" class="sort">Lather with liquid soap</li>
+    <li id="3" class="sort">Clean nails with a nail brush</li>
+    <li id="4" class="sort">Rinse thoroughly</li>
+    <li id="5" class="sort">Dry hygienically with paper towels or air dryer</li>
+    </ul>
+
+<input value="Submit" class="Submit" type="button" /> 
+<div class="cleaner"></div></div><div style="padding-top: 30px; padding-left: 65px; font-size: 12pt" id="correct" class="final_result">Correct. <p>Please continue.</p></div><div style="padding-top: 30px; padding-left: 65px; font-size: 12pt" id="incorrect" class="final_result">Incorrect. <p>Try again.</p></div>
 
 
 
@@ -121,7 +134,7 @@ font-weight:bold;
 
 <script language="javascript">
 
-
+var activity = 1;
 
     if (parent.$) {
         var frame = parent.$("#myFrame").contents();

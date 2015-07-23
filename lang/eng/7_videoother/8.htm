@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Drag and drop load scripts</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201507061504_9d3cddc375ca68aec3d1075ae212591b" type="text/css" media="screen" />
+
+<style type="text/css">
+.Submit {
+	
+BORDER-RIGHT: medium none; 
+BORDER-TOP: medium none; 
+BACKGROUND-color: #ececec; 
+LEFT: 520px; 
+BORDER-LEFT: medium none; 
+WIDTH: 81px; 
+CURSOR: pointer; 
+COLOR: #555; 
+BORDER-BOTTOM: medium none; 
+POSITION: absolute; 
+TOP: 275px; 
+HEIGHT: 24px; 
+OUTLINE: none;
+z-index:1;
+}
+	
+.Submit:hover {
+	
+BORDER-RIGHT: medium none; 
+BORDER-TOP: medium none; 
+BACKGROUND-color: #d7d7d7; 
+BORDER-LEFT: medium none; 
+WIDTH: 81px; 
+CURSOR: pointer; 
+BORDER-BOTTOM: medium none; 
+HEIGHT: 24px
+}
+	
+</style>
+
+</head>
+<body id="screenBody" onload="parent.onFrameLoad();">
+
+<div id="whiteBoxWrap" class="introFx fx2 width100">
+<div class="whiteBox">
+<div class="boxContent">
+<div class="t"></div>
+<h1 class="width45">Sort Tabs Test</h1>
+<p>We must follow the waste hierarchy when we are using resources.</p>
+<div style="margin-top: 2px;">
+<div id="sortWrap" class="width75">
+<ul id="sort-list">
+<li id="sort1" class="sort rounded">(1 - order test) Prevent waste wherever possible. If you can&rsquo;t prevent, then&hellip;.</li>
+<li id="sort2" class="sort rounded">(2 - order test) Consider if the item can be reused. If you can&rsquo;t reuse then&hellip;.</li>
+<li id="sort3" class="sort rounded">(3 - order test) Recycle. (You should only consider this option when prevention and reuse have been ruled out). If you can&rsquo;t recycle, then&hellip;.</li>
+<li id="sort4" class="sort rounded">(4 - order test) Recover a value (eg energy). If you can&rsquo;t recover, then&hellip;.</li>
+<li id="sort5" class="sort rounded">(5 - order test) Dispose responsibly. If none of the options higher up in the waste hierarchy are available, only then may this option be used.</li>
+</ul>
+</div>
+</div>
+<dl class="noteExpand expandMiddle" style="position: absolute; left: 380px; top: 8px;"><dd class="interact_img"></dd><dt>Interact</dt><dd>Can you order the steps involved? You have 3 attempts.</dd></dl><input class="Submit" value="Submit" type="button" />
+<div class="cleaner"></div>
+</div>
+<div class="b">
+<div></div>
+</div>
+</div>
+</div>
+<div style="left: 270px; top: 200px; width: 360px; position: absolute; z-index: 2;" class="whiteboxFeedback">
+
+<div id="correct">
+<div class="hotspotMinorCloseWindow" title="Close">close<span></span></div>
+<span>Correct.</span><br />You placed the waste hierarchy steps - prevent, reuse, recycle, recover and disposal in the correct order. If you apply these steps when you are using resources, you will go a long way to helping make the workplace more resource efficient.</div>
+
+<div id="incorrect">
+<div class="hotspotMinorCloseWindow" title="Close">close<span></span></div>
+<span>Incorrect.</span><br />Try again.</div>
+
+<div id="attemptsOver">
+<div class="hotspotMinorCloseWindow" title="Close">close<span></span></div>
+<span>You are out of attempts.</span><br />
+ If you apply these steps when you are using resources, you will go a long way to helping make the workplace more resource efficient.
+<br /><span>Please see tabs for correct order.</span></div>
+</div>
+
+
+<img id="bg" class="introFx fx1" alt="Sky above clouds." src="../../../media/space.jpg" width="675" height="390" />
+<script type="text/javascript">
+var activity = 1;
+if (parent.$) {
+        var frame = parent.$("#myFrame").contents();
+        parent.$(".hotspotsMinor a", frame).hotspotMinor();
+        
+            //parent.$(".sort", frame).sortTabs();
+            //parent.$(".sort", frame).sortTabs({'test':true});
+            parent.$(".sort", frame).sortTabs({'noOfAttempts': 3 });
+        
+    
+            parent.$('.introFx', frame).introFx({
+                'afterFx': function() {
+                    //parent.$(".sort", frame).sortTabs();
+                }
+            });
+}    
+</script>
+</body>
+</html>
