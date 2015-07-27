@@ -53,11 +53,11 @@ HEIGHT: 24px
 <div style="margin-top: 2px;">
 <div id="sortWrap" class="width75">
 <ul id="sort-list">
-<li id="sort1" class="sort rounded">(1 - order test) Prevent waste wherever possible. If you can&rsquo;t prevent, then&hellip;.</li>
-<li id="sort2" class="sort rounded">(2 - order test) Consider if the item can be reused. If you can&rsquo;t reuse then&hellip;.</li>
-<li id="sort3" class="sort rounded">(3 - order test) Recycle. (You should only consider this option when prevention and reuse have been ruled out). If you can&rsquo;t recycle, then&hellip;.</li>
-<li id="sort4" class="sort rounded">(4 - order test) Recover a value (eg energy). If you can&rsquo;t recover, then&hellip;.</li>
-<li id="sort5" class="sort rounded">(5 - order test) Dispose responsibly. If none of the options higher up in the waste hierarchy are available, only then may this option be used.</li>
+<li class="sort rounded">(1 - order test) Prevent waste wherever possible. If you can&rsquo;t prevent, then&hellip;.</li>
+<li class="sort rounded">(2 - order test) Consider if the item can be reused. If you can&rsquo;t reuse then&hellip;.</li>
+<li class="sort rounded">(3 - order test) Recycle. (You should only consider this option when prevention and reuse have been ruled out). If you can&rsquo;t recycle, then&hellip;.</li>
+<li class="sort rounded">(4 - order test) Recover a value (eg energy). If you can&rsquo;t recover, then&hellip;.</li>
+<li class="sort rounded">(5 - order test) Dispose responsibly. If none of the options higher up in the waste hierarchy are available, only then may this option be used.</li>
 </ul>
 </div>
 </div>
@@ -69,21 +69,24 @@ HEIGHT: 24px
 </div>
 </div>
 </div>
-<div style="left: 270px; top: 200px; width: 360px; position: absolute; z-index: 2;" class="whiteboxFeedback">
 
-<div id="correct">
-<div class="hotspotMinorCloseWindow" title="Close">close<span></span></div>
-<span>Correct.</span><br />You placed the waste hierarchy steps - prevent, reuse, recycle, recover and disposal in the correct order. If you apply these steps when you are using resources, you will go a long way to helping make the workplace more resource efficient.</div>
+<div id="sortContain" style="width:675px; height:390px; border:1px solid blue;">
+    <div style="left: 270px; top: 200px; width: 360px; border:1px solid blue;" class="whiteboxFeedback">
 
-<div id="incorrect">
-<div class="hotspotMinorCloseWindow" title="Close">close<span></span></div>
-<span>Incorrect.</span><br />Try again.</div>
+    <div id="correct">
+    <div class="hotspotMinorCloseWindow" title="Close">close<span></span></div>
+    <span>Correct.</span><br />You placed the waste hierarchy steps - prevent, reuse, recycle, recover and disposal in the correct order. If you apply these steps when you are using resources, you will go a long way to helping make the workplace more resource efficient.</div>
 
-<div id="attemptsOver">
-<div class="hotspotMinorCloseWindow" title="Close">close<span></span></div>
-<span>You are out of attempts.</span><br />
- If you apply these steps when you are using resources, you will go a long way to helping make the workplace more resource efficient.
-<br /><span>Please see tabs for correct order.</span></div>
+    <div id="incorrect">
+    <div class="hotspotMinorCloseWindow" title="Close">close<span></span></div>
+    <span>Incorrect.</span><br />Try again.</div>
+
+    <div id="attemptsOver">
+    <div class="hotspotMinorCloseWindow" title="Close">close<span></span></div>
+    <span>You are out of attempts.</span><br />
+     If you apply these steps when you are using resources, you will go a long way to helping make the workplace more resource efficient.
+    <br /><span>Please see tabs for correct order.</span></div>
+    </div>
 </div>
 
 
@@ -92,6 +95,7 @@ HEIGHT: 24px
 var activity = 1;
 if (parent.$) {
         var frame = parent.$("#myFrame").contents();
+//    parent.$("#myFrame").css({'border':'1px solid green'});
         parent.$(".hotspotsMinor a", frame).hotspotMinor();
         
             //parent.$(".sort", frame).sortTabs();
