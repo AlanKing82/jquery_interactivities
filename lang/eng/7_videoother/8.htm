@@ -7,40 +7,6 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <title>Drag and drop load scripts</title>
 <link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201507061504_9d3cddc375ca68aec3d1075ae212591b" type="text/css" media="screen" />
-
-<style type="text/css">
-.Submit {
-	
-BORDER-RIGHT: medium none; 
-BORDER-TOP: medium none; 
-BACKGROUND-color: #ececec; 
-LEFT: 520px; 
-BORDER-LEFT: medium none; 
-WIDTH: 81px; 
-CURSOR: pointer; 
-COLOR: #555; 
-BORDER-BOTTOM: medium none; 
-POSITION: absolute; 
-TOP: 275px; 
-HEIGHT: 24px; 
-OUTLINE: none;
-z-index:1;
-}
-	
-.Submit:hover {
-	
-BORDER-RIGHT: medium none; 
-BORDER-TOP: medium none; 
-BACKGROUND-color: #d7d7d7; 
-BORDER-LEFT: medium none; 
-WIDTH: 81px; 
-CURSOR: pointer; 
-BORDER-BOTTOM: medium none; 
-HEIGHT: 24px
-}
-	
-</style>
-
 </head>
 <body id="screenBody" onload="parent.onFrameLoad();">
 
@@ -49,19 +15,29 @@ HEIGHT: 24px
 <div class="boxContent">
 <div class="t"></div>
 <h1 class="width45">Sort Tabs Test</h1>
-<p>We must follow the waste hierarchy when we are using resources.</p>
-<div style="margin-top: 2px;">
-<div id="sortWrap" class="width75">
-<ul id="sort-list">
-<li class="sort rounded">(1 - order test) Prevent waste wherever possible. If you can&rsquo;t prevent, then&hellip;.</li>
-<li class="sort rounded">(2 - order test) Consider if the item can be reused. If you can&rsquo;t reuse then&hellip;.</li>
-<li class="sort rounded">(3 - order test) Recycle. (You should only consider this option when prevention and reuse have been ruled out). If you can&rsquo;t recycle, then&hellip;.</li>
-<li class="sort rounded">(4 - order test) Recover a value (eg energy). If you can&rsquo;t recover, then&hellip;.</li>
-<li class="sort rounded">(5 - order test) Dispose responsibly. If none of the options higher up in the waste hierarchy are available, only then may this option be used.</li>
-</ul>
+<p class="width60">We must follow the waste hierarchy when we are using resources. </p>
+
+<br />
+
+
+<div id="sortWrap">
+<ol id="sort-list">
+<li class="sort">Prevent waste wherever possible. If you can&rsquo;t prevent, then&hellip;.</li>
+<li class="sort">Consider if the item can be reused. If you can&rsquo;t reuse then&hellip;.</li>
+<li class="sort">Recycle. (You should only consider this option when prevention and reuse have been ruled out). If you can&rsquo;t recycle, then&hellip;.</li>
+<li class="sort">Recover a value (eg energy). If you can&rsquo;t recover, then&hellip;.</li>
+<li class="sort">Dispose responsibly. If none of the options higher up in the waste hierarchy are available, only then may this option be used.</li>
+</ol>
+<input class="btn" id="sortSubmit" value="submit" type="button" />
 </div>
-</div>
-<dl class="noteExpand expandMiddle" style="position: absolute; left: 380px; top: 8px;"><dd class="interact_img"></dd><dt>Interact</dt><dd>Can you order the steps involved? You have 3 attempts.</dd></dl><input class="Submit" value="Submit" type="button" />
+<!--<input class="btn" id="sortSubmit" value="submit" type="button" />-->
+<dl class="noteExpand expandMiddle" style="position: absolute; left: 380px; top: 10px;">
+<dd class="interact_img"></dd><dt>Interact</dt><dd>Can you order the steps involved?<br />You have 3 attempts.</dd>
+</dl>
+
+
+
+
 <div class="cleaner"></div>
 </div>
 <div class="b">
@@ -70,19 +46,19 @@ HEIGHT: 24px
 </div>
 </div>
 
-<div id="sortContain" style="width:675px; height:390px; border:1px solid blue;">
-    <div style="left: 270px; top: 200px; width: 360px; border:1px solid blue;" class="whiteboxFeedback">
+<div id="sortFeedbackContainer">
+    <div class="whiteboxFeedback">
 
-    <div id="correct">
-    <div class="hotspotMinorCloseWindow" title="Close">close<span></span></div>
+    <div id="correct" style="left: 270px; top: 200px; width: 290px;">
+    <div class="closeWindow" title="Close">close<span></span></div>
     <span>Correct.</span><br />You placed the waste hierarchy steps - prevent, reuse, recycle, recover and disposal in the correct order. If you apply these steps when you are using resources, you will go a long way to helping make the workplace more resource efficient.</div>
 
-    <div id="incorrect">
-    <div class="hotspotMinorCloseWindow" title="Close">close<span></span></div>
+    <div id="incorrect" style="left: 270px; top: 200px; width: 160px;">
+    <div class="closeWindow" title="Close">close<span></span></div>
     <span>Incorrect.</span><br />Try again.</div>
 
-    <div id="attemptsOver">
-    <div class="hotspotMinorCloseWindow" title="Close">close<span></span></div>
+    <div id="attemptsOver" style="left: 270px; top: 200px; width: 260px;">
+    <div class="closeWindow" title="Close">close<span></span></div>
     <span>You are out of attempts.</span><br />
      If you apply these steps when you are using resources, you will go a long way to helping make the workplace more resource efficient.
     <br /><span>Please see tabs for correct order.</span></div>
@@ -96,18 +72,12 @@ var activity = 1;
 if (parent.$) {
         var frame = parent.$("#myFrame").contents();
 //    parent.$("#myFrame").css({'border':'1px solid green'});
-        parent.$(".hotspotsMinor a", frame).hotspotMinor();
+        //parent.$(".hotspotsMinor a", frame).hotspotMinor();
         
             //parent.$(".sort", frame).sortTabs();
             //parent.$(".sort", frame).sortTabs({'test':true});
             parent.$(".sort", frame).sortTabs({'noOfAttempts': 3 });
-        
-    
-            parent.$('.introFx', frame).introFx({
-                'afterFx': function() {
-                    //parent.$(".sort", frame).sortTabs();
-                }
-            });
+            parent.$('.introFx', frame).introFx({'prevNavButtonDisable': true});
 }    
 </script>
 </body>

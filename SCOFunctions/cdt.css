@@ -931,6 +931,8 @@ color:#ffffff;
 	overflow:hidden;
 }
 
+/* sortable tabs activity */
+
 #sort-list li
 {
 	background:#BDEDFF;
@@ -940,90 +942,78 @@ color:#ffffff;
 	padding:1px 10px;
 }
 
-
-
-
-div#sortWrap ul#sort-list li
-{
-    margin: 3px; 
-    background-color:#969696;
-    color:#fff;
-    padding: 6px 24px 6px 12px;
-}
-
-/*rounded numbers*/
-
-/*
 div#sortWrap ol {
-    list-style-type: none;
-    list-style-type: decimal !ie; IE 7- hack
-    counter-reset: li-counter;
+    counter-reset: li; /* Initiate a counter */
+    list-style: none; /* Remove default numbering */
+    *list-style: decimal; /* Keep using default numbering for IE6/7 */
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
 }
 
 div#sortWrap ol li{
     position: relative;
-    margin: 3px; 
-    background-color:#ff7e00;
-    color:#fff;
-    padding: 6px 12px 6px 12px;
-    display:block;
+    display: block;
+    padding: 4px 35px 5px 28px;
+    margin: 0px 20px 3px 20px; 
+    visibility: hidden;  
+    color: #444;
+    text-decoration: none;
+    border-radius: .5em;
+    transition: all .3s ease-out; 
+    background: #ddd url(../common_images/sortable.png) no-repeat center left;
 }
 
-div#sortWrap ol > li:before {
-    position: absolute;
-    top: 0;
-    left: -2em;
-    width: 1.2em;
-    height: 1.2em;
-    font-size: 1.2em;
-    line-height: 1.2;
+div#sortWrap ol.itemHeightSmall li{
+    padding: 1px 35px 1px 28px;
+}
+
+div#sortWrap ol.itemHeightMedium li{
+    padding: 3px 35px 3px 28px;
+}
+
+div#sortWrap ol li:hover{
+    background: #d0d0d0 url(../common_images/sortable_hover.png) no-repeat center left;
+}
+
+div#sortWrap ol li.sort{
+    counter-increment: li;
+}
+
+div#sortWrap ol li.numberedStyle:before{
+    content: counter(li);
+    position: absolute; 
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: #87ceeb;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid #fff;
     text-align: center;
-    color: #f5f5f5;
-    border: 2px solid #c5c5c5;
-    border-radius: 50%;
-    background-color: #464646;
-    content: counter(li-counter);
-    counter-increment: li-counter;
-}
-*/
-
-/*tiled*/
-
-div#sortWrap ol {
-    list-style-type: none;
-    list-style-type: decimal !ie; /*IE 7- hack*/
-     counter-reset: li-counter;
-}
-div#sortWrap ol li{
-    position: relative;
-    margin: 3px;
-    background-color:#ff7e00;
-    color:#fff;
-    padding: 6px 12px 6px 12px;
-    display:block;
-}
-div#sortWrap ol > li:before {
-    position: absolute;
-    top: -0.6em;
-    left: -0.6em;
-    width: 1.8em;
-    height: 1.2em;
-     
-    font-size: 1.3em;
-    line-height: 1.2;
     font-weight: bold;
-    text-align: center;
-    color: #464646;
-    background-color: #d0d0d0;
-     
-    transform: rotate(-20deg);
-    -ms-transform: rotate(-20deg);
-    -webkit-transform: rotate(-20deg);
-    z-index: 99;
-    overflow: hidden;
-     
-    content: counter(li-counter);
-    counter-increment: li-counter;
+    border-radius: 2em;
+    transition: all .3s ease-out;
+}
+
+div#sortWrap ol li.numberedStyle{
+  background: url(../common_images/tick_small.png) no-repeat center right;
+  background-color: #87ceeb;
+}
+
+div#sortWrap ol li.correctOrder{
+    background-image:none;
+}
+
+#sortFeedbackContainer{
+    height:385px;
+    width:675px;
+}
+
+#sortWrap .btn {
+    position:relative;
+    float:right;
+    margin-right:30px;
+    top:-3px;
 }
 
 /* Note small */
@@ -1968,6 +1958,44 @@ img#bg { z-index:-1; top:0px; }
     display:none;
     position:absolute;
 }
+
+/* general button styling */
+
+.btn {
+  display: inline-block;
+  padding: 3px 14px;
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  background-imcolor: #ddd;
+  border: 1px solid transparent;
+  border-radius: .5em;
+  color: #555; 
+}
+	
+.btn:hover {
+    background-color: #d7d7d7; 
+}
+
+
+	
+
+
+
+
+
 
 
 
