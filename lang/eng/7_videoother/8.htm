@@ -10,11 +10,15 @@
 </head>
 <body id="screenBody" onload="parent.onFrameLoad();">
 
+<script src="../../../SCOFunctions/jquery.min.js"></script>
+<script src="../../../SCOFunctions/jquery-ui.custom.min.js"></script>
+<script src="../../../SCOFunctions/jquery.ui.touch-punch.min.js"></script>
+
 <div id="whiteBoxWrap" class="introFx fx2 width100">
 <div class="whiteBox">
 <div class="boxContent">
 <div class="t"></div>
-<h1 class="width45">Sort Tabs Test</h1>
+<h1 class="width45">Sort Tabs Test 1</h1>
 <p class="width60">We must follow the waste hierarchy when we are using resources. </p>
 
 <br />
@@ -76,8 +80,14 @@ if (parent.$) {
         
             //parent.$(".sort", frame).sortTabs();
             //parent.$(".sort", frame).sortTabs({'test':true});
-            parent.$(".sort", frame).sortTabs({'noOfAttempts': 3 });
-            parent.$('.introFx', frame).introFx({'prevNavButtonDisable': true});
+//            parent.$(".sort", frame).sortTabs({'noOfAttempts': 3 });
+//            parent.$('.introFx', frame).introFx({'prevNavButtonDisable': true});
+    
+            parent.$('.introFx', frame).introFx({
+                'afterFx': function() {
+                    parent.$(".sort", frame).sortTabs({'noOfAttempts': 3 });	
+                }
+            });
 }    
 </script>
 </body>

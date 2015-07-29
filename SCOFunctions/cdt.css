@@ -951,14 +951,13 @@ div#sortWrap ol {
 
 div#sortWrap ol li{
     position: relative;
-    display: block;
     padding: 4px 35px 5px 28px;
     margin: 0px 20px 3px 20px; 
     visibility: hidden;  
     color: #444;
     text-decoration: none;
     border-radius: .5em;
-    transition: all .3s ease-out; 
+    transition: background-position .3s ease-out;
     background: #ddd url(../common_images/sortable.png) no-repeat center left;
 }
 
@@ -984,7 +983,7 @@ div#sortWrap ol li.numberedStyle:before{
     left: -1.3em;
     top: 50%;
     margin-top: -1.3em;
-    background: #87ceeb;
+    background: #daeaef;
     height: 2em;
     width: 2em;
     line-height: 2em;
@@ -997,7 +996,7 @@ div#sortWrap ol li.numberedStyle:before{
 
 div#sortWrap ol li.numberedStyle{
   background: url(../common_images/tick_small.png) no-repeat center right;
-  background-color: #87ceeb;
+  background-color: #daeaef;
 }
 
 div#sortWrap ol li.correctOrder{
@@ -1014,6 +1013,7 @@ div#sortWrap ol li.correctOrder{
     float:right;
     margin-right:30px;
     top:-3px;
+    visibility:hidden;
 }
 
 /* Note small */

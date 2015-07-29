@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Drag and drop load scripts</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201507061504_9d3cddc375ca68aec3d1075ae212591b" type="text/css" media="screen" />
+</head>
+<body id="screenBody" onload="parent.onFrameLoad();">
+<!--
+<style>
+#sortWrap{
+    position:absolute;
+left:-20px;
+        top:170px;
+} 
+</style>
+-->
+
+<script src="../../../SCOFunctions/jquery.min.js"></script>
+<script src="../../../SCOFunctions/jquery-ui.custom.min.js"></script>
+<script src="../../../SCOFunctions/jquery.ui.touch-punch.min.js"></script>
+
+<div class="introFx fx2 width100" id="whiteBoxWrap">
+<div class="whiteBox">
+<div class="boxContent">
+<div class="t"></div>
+<h1 class="width50">Test your knowledge</h1>
+<p class="width70">Below are some options for cleaning the outside of upper storey windows. <br />Arrange the options in order, based on the hierarchy of control. Select the back arrow if you want to read the information on the previous screen again.</p>
+<dl class="noteExpand expandShort" style="left: 440px; top: 25px; position: absolute; z-index: 3;">
+<div class="interact_img"></div>
+<dt>Interact</dt><dd>Click and drag the steps <br />below into the correct order.</dd></dl>
+
+<div id="sortWrap" class="width70">
+<ol id="sort-list">
+<li class="sort">Install self-cleaning windows.</li>
+<li class="sort">Clean the window with poles from the ground.</li>
+<li class="sort">Use a secure working platform which has barriers to prevent a fall, such as a cherry picker or mobile scaffold. </li>
+<li class="sort">Using a secured ladder, provide the worker with a harness and attachment point above the location of their work.</li>
+</ol>
+<input class="btn" id="sortSubmit" type="button" value="submit" />
+</div>
+<div class="cleaner"></div>
+</div>
+<div class="b">
+<div></div>
+</div>
+</div>
+</div>
+
+
+
+
+
+<div id="sortFeedbackContainer">
+<div class="whiteboxFeedback">
+
+<div id="correct" style="width: 300px; top: 200px; left: 115px;">
+<div title="Close" class="closeWindow">close<span></span></div>
+<span>Correct.</span> Yes, installing self-cleaning windows avoids the need to clean the windows, whilst cleaning windows from the ground avoids the need for work at height. Using a&nbsp;secure working platform is more likely to prevent a fall than using a ladder, but a ladder can be used safely in some circumstances. Please continue.
+</div>
+
+<div id="incorrect" style="width: 200px; top: 270px; left: 15px;">
+<div title="Close" class="closeWindow">close<span></span></div>
+<span>Incorrect.</span><br />Try again.</div>
+
+<div id="attemptsOver" style="left: 270px; top: 200px; width: 260px;">
+<div class="closeWindow" title="Close">close<span></span></div>
+<span>You are out of attempts.</span><br />
+     installing self-cleaning windows avoids the need to clean the windows, whilst cleaning windows from the ground avoids the need for work at height. Using a&nbsp;secure working platform is more likely to prevent a fall than using a ladder, but a ladder can be used safely in some circumstances.
+<br /><span>Please see tabs for correct order.</span></div>
+    
+</div>
+</div>
+
+
+
+
+<img id="bg" class="introFx fx1" alt="Sky above clouds." src="../../../media/L01S08.png" width="675" height="390" />
+<script type="text/javascript">
+var activity = 1;
+if (parent.$) {
+        var frame = parent.$("#myFrame").contents();
+
+            parent.$(".sort", frame).sortTabs({'noOfAttempts': 3 });
+            parent.$('.introFx', frame).introFx({'prevNavButtonDisable': true});
+}    
+</script>
+</body>
+</html>
