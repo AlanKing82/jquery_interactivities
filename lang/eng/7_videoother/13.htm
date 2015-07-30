@@ -9,39 +9,76 @@
 <link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201507061504_9d3cddc375ca68aec3d1075ae212591b" type="text/css" media="screen" />
 </head>
 <body id="screenBody" onload="parent.onFrameLoad();">
-<!--
 <style>
+<style>
+ol li {background-image:none;}
+
+.ui-state-highlight { height: 65px; width:138px;}
+#sort-list li .ui-state-highlight {
+	border: 1px solid red;
+	background-color: red;
+    background-image: none;
+}  
+#match-list, #sort-list {margin:0px; padding:0px;}
+#match-list li, #sort-list li {margin:0px; padding:0px;}   
+#sort-to-match  h5 {margin:7px 0px; padding:0px 0px;}    
+#sort-to-match h5{ 
+    color: #203947;
+    font-weight: bold; 
+    font-size:98%;
+    }     
+#sort-list li, #match-list li
+{
+   list-style: none;
+   font-weight: bold;
+   font-size: 1em;
+}    
+#sort-list li { 
+    z-index: 5; 
+    opacity: 0.9;
+    display:inline-block;
+    wdith:138px;
+}
+  
+#match-list li {
+    color: #203947; 
+    border-top:1px solid #dbdbdc;
+    border-bottom:1px solid #f6f6f6;
+}      
+#match-list li span { 
+    position:relative;
+    top:1.25em;
+}
+
 #sortWrap{
-    position:absolute;
-left:-20px;
-        top:170px;
-} 
+position:absolute;
+    left:330px;
+    top:20px;
+}
+    
+.btn {
+    position: absolute;
+    left: 530px;
+    top: 330px; 
+}
+ 
 </style>
--->
 
 <script src="../../../SCOFunctions/jquery.min.js"></script>
 <script src="../../../SCOFunctions/jquery-ui.custom.min.js"></script>
 <script src="../../../SCOFunctions/jquery.ui.touch-punch.min.js"></script>
 
-<div class="introFx fx2 width100" id="whiteBoxWrap">
+<div class="introFx fx2 width40" id="whiteBoxWrap">
 <div class="whiteBox">
 <div class="boxContent">
 <div class="t"></div>
-<h1 class="width50">Tabs Width</h1>
-<p class="width70">Below are some options for cleaning the outside of upper storey windows. <br />Arrange the options in order, based on the hierarchy of control. Select the back arrow if you want to read the information on the previous screen again.</p>
-<dl class="noteExpand expandShort" style="left: 440px; top: 25px; position: absolute; z-index: 3;">
+<h1>Test your knowledge</h1>
+<p>Below are some options for cleaning the outside of upper storey windows. <br />Arrange the options in order, based on the hierarchy of control. Select the back arrow if you want to read the information on the previous screen again.</p>
+<dl class="noteExpand expandShort">
 <div class="interact_img"></div>
-<dt>Interact</dt><dd>Click and drag the steps <br />below into the correct order. You have 3 attempts.</dd></dl>
+<dt>Interact</dt><dd>Click and drag the steps <br />below into the correct order.</dd></dl>
 
-<div id="sortWrap" class="width70">
-<ol id="sort-list">
-<li class="sort">Install self-cleaning windows.</li>
-<li class="sort">Clean the window with poles from the ground.</li>
-<li class="sort">Use a secure working platform which has barriers to prevent a fall, such as a cherry picker or mobile scaffold. </li>
-<li class="sort">Using a secured ladder, provide the worker with a harness and attachment point above the location of their work.</li>
-</ol>
-<input class="btn" id="sortSubmit" type="button" value="submit" />
-</div>
+
 <div class="cleaner"></div>
 </div>
 <div class="b">
@@ -50,7 +87,30 @@ left:-20px;
 </div>
 </div>
 
+<div class="introFx fx3">
+<div id="sort-to-match">
+<div class="column1" style="position: absolute; width: 150px; top: 15px; left: 280px; height: 320px; display: block;">
+<h5 style="text-align: center;">Reported Falls</h5>
+<ol id="match-list" style="text-align: right;">
+<li><span>800 per year</span></li>
+<li><span>600 per year</span></li>
+<li><span>400 per year</span></li>
+<li><span>100 per year</span></li>
+</ol>
+</div>
+</div>
 
+
+<div id="sortWrap" class="width25">
+<ol id="sort-list">
+<li class="sort"><img title="Health services" alt="Health services" src="../../../media/industry01.jpg" /></li>
+<li class="sort"><img title="Health services" alt="Health services" src="../../../media/industry02.jpg" /></li>
+<li class="sort"><img title="Health services" alt="Health services" src="../../../media/industry03.jpg" /></li>
+<li class="sort"><img title="Health services" alt="Health services" src="../../../media/industry04.jpg" /></li>
+</ol>
+</div>
+<input class="btn" id="sortSubmit" type="button" value="submit" />
+</div>
 
 
 
@@ -66,7 +126,7 @@ left:-20px;
 <div title="Close" class="closeWindow">close<span></span></div>
 <span>Incorrect.</span><br />Try again.</div>
 
-<div id="attemptsOver" style="left: 270px; top: 100px; width: 260px;">
+<div id="attemptsOver" style="left: 270px; top: 200px; width: 260px;">
 <div class="closeWindow" title="Close">close<span></span></div>
 <span>You are out of attempts.</span><br />
      installing self-cleaning windows avoids the need to clean the windows, whilst cleaning windows from the ground avoids the need for work at height. Using a&nbsp;secure working platform is more likely to prevent a fall than using a ladder, but a ladder can be used safely in some circumstances.
@@ -86,6 +146,11 @@ if (parent.$) {
 
             parent.$(".sort", frame).sortTabs({'noOfAttempts': 3 });
             parent.$('.introFx', frame).introFx({'prevNavButtonDisable': true});
+    
+        parent.$("#match-list li", frame).css({ 'height':'65px',
+                                                'padding':'0px',
+                                                'margin': '2px 0px'
+                                          });
 }    
 </script>
 </body>

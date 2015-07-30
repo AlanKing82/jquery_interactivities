@@ -395,7 +395,7 @@ ul
 	border:3px solid red;
 }
 
-#incorrect,#correct,.modalWindow #incorrect,.modalWindow #correct
+#incorrect,#correct,.modalWindow #incorrect,.modalWindow #correct, #attemptsOver
 {
 	background:no-repeat 10px;
 	display:none;
@@ -408,14 +408,14 @@ ul
 	text-align:center;
 }
 
-.modalWindow #incorrect,.modalWindow #correct
+.modalWindow #incorrect,.modalWindow #correct,.modalWindow #attemptsOver
 {
 	border:0;
 	display:block;
 	margin:0;
 }
 
-#incorrect span,#correct span,#attemptsOver span
+#incorrect span,#correct span,#attemptsOver span, #attemptsOver
 {
 	color:#000;
 }

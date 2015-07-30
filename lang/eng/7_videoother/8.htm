@@ -18,11 +18,10 @@
 <div class="whiteBox">
 <div class="boxContent">
 <div class="t"></div>
-<h1 class="width45">Sort Tabs Test 1</h1>
+<h1 class="width45">showCorrectAnswers/noOfAttempts</h1>
 <p class="width60">We must follow the waste hierarchy when we are using resources. </p>
 
 <br />
-
 
 <div id="sortWrap">
     <ol id="sort-list">
@@ -75,17 +74,9 @@
 var activity = 1;
 if (parent.$) {
         var frame = parent.$("#myFrame").contents();
-//    parent.$("#myFrame").css({'border':'1px solid green'});
-        //parent.$(".hotspotsMinor a", frame).hotspotMinor();
-        
-            //parent.$(".sort", frame).sortTabs();
-            //parent.$(".sort", frame).sortTabs({'test':true});
-//            parent.$(".sort", frame).sortTabs({'noOfAttempts': 3 });
-//            parent.$('.introFx', frame).introFx({'prevNavButtonDisable': true});
-    
             parent.$('.introFx', frame).introFx({
                 'afterFx': function() {
-                    parent.$(".sort", frame).sortTabs({'noOfAttempts': 3 });	
+                    parent.$(".sort", frame).sortTabs({'noOfAttempts': 3, 'showCorrectAnswers': true });	
                 }
             });
 }    

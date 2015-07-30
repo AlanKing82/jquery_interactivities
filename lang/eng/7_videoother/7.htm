@@ -10,146 +10,69 @@
 </head>
 <body id="screenBody" onload="parent.onFrameLoad();">
 
-
-
-
-
-<style>
-
-
-
-#incorrect,#correct, .modalWindow #incorrect, .modalWindow #correct {
-    display: none;
-    text-align: left;
-    margin-top:0.5em;
-    font-size:130%;
-    font-weight:bold;
-    padding:0.2em;
-    padding-left:200px;
-    padding-right:0.5em;
-    padding-top:0.2em;
-    background: no-repeat 10px;
-    min-height: 44px;
-	height: auto !important;
-	height: 44px;
-}
-
-
-#incorrect {
-    color:#8B0000;
-
-    background-image: url(../../../media/display_incorrect_bgw.jpg) !important;
-    background-color:transparent !important;
-padding:0px;
-}
-#correct {
-    color:#006400;
-
-    background-image: url(../../../media/display_correct_bgw.jpg) !important;
-    background-color:transparent !important;
-padding:0px;
-}
-
-
-.Submit{
-    background:url(../../../media/input_up.jpg) no-repeat;
-    cursor:pointer;
-    width: 81px;
-    height: 24px;
-    border: none;
-outline: none; /* hide dotted outline in Firefox */
-}
-
-.Submit:active{
-    background:url(../../../media/input_down.jpg) no-repeat;
-    cursor:pointer;
-    width: 81px;
-    height: 24px;
-    border: none;
-
-}
-#sort-list li
-{
-   list-style:none;
-padding-left:0px; 
-   background: url(../../../media/act_bar_middle.png) 0 0em no-repeat;
-    background-color:transparent;
-height:29px;
-width:460px;
-padding:8px 0px 0px 30px;
-margin:0;
-}
-
-
-
-body {
-    color:#000;
-    font-family:Arial, Helvetica, sans-serif !important;
-    font-size:100% !important;
-    padding:0;
-    margin:0;
-    background-color:transparent;
-}
-p{font-size:10pt}
-
-h1{
-font-size:12pt;
-color:#2D5B6D;
-}
-
-li{
-font-size:10pt;
-padding:0px 0px 0px 30px;
-color:#ffffff;
-font-weight:bold;
-}
-
-.textLong, .text, .textRight {
-    background:none;
-    padding:10px;
-    padding-bottom:0;
-}</style>
-
-</head>
-<body id="screenBody" onload="parent.onFrameLoad();">
-
 <script src="../../../SCOFunctions/jquery.min.js"></script>
 <script src="../../../SCOFunctions/jquery-ui.custom.min.js"></script>
 <script src="../../../SCOFunctions/jquery.ui.touch-punch.min.js"></script>
 
+<div id="whiteBoxWrap" class="introFx fx2 width100">
+<div class="whiteBox">
+<div class="boxContent">
+<div class="t"></div>
+<h1 class="width45">Sort Tabs - standard</h1>
+<p class="width60">We must follow the waste hierarchy when we are using resources. </p>
+
+<br />
 
 
-<div style="padding-top: 10px; padding-left: 10px" class="ulDesc">
-<h1>loadExtraScripts</h1>
-<p>Can you click and drag them into the correct order?</p>
+<div id="sortWrap">
+    <ol id="sort-list">
+    <li class="sort">Prevent waste wherever possible. If you can&rsquo;t prevent, then&hellip;.</li>
+    <li class="sort">Consider if the item can be reused. If you can&rsquo;t reuse then&hellip;.</li>
+    <li class="sort">Recycle. (You should only consider this option when prevention and reuse have been ruled out). If you can&rsquo;t recycle, then&hellip;.</li>
+    <li class="sort">Recover a value (eg energy). If you can&rsquo;t recover, then&hellip;.</li>
+    <li class="sort">Dispose responsibly. If none of the options higher up in the waste hierarchy are available, only then may this option be used.</li>
+    </ol>
+    <input class="btn" id="sortSubmit" value="submit" type="button" />
+</div>
 
-    <ul id="sort-list">
-    <li id="1" class="sort">Wet hands with comfortably hot water</li>
-    <li id="2" class="sort">Lather with liquid soap</li>
-    <li id="3" class="sort">Clean nails with a nail brush</li>
-    <li id="4" class="sort">Rinse thoroughly</li>
-    <li id="5" class="sort">Dry hygienically with paper towels or air dryer</li>
-    </ul>
+<dl class="noteExpand expandMiddle" style="position: absolute; left: 380px; top: 10px;">
+<dd class="interact_img"></dd><dt>Interact</dt><dd>Can you order the steps involved?</dd>
+</dl>
 
-<input value="Submit" class="Submit" id="sortSubmit" type="button" /> 
-<div class="cleaner"></div></div><div style="padding-top: 30px; padding-left: 65px; font-size: 12pt" id="correct" class="final_result">Correct. <p>Please continue.</p></div><div style="padding-top: 30px; padding-left: 65px; font-size: 12pt" id="incorrect" class="final_result">Incorrect. <p>Try again.</p></div>
+<div class="cleaner"></div>
+</div>
+<div class="b">
+<div></div>
+</div>
+</div>
+</div>
+
+<div id="sortFeedbackContainer">
+    <div class="whiteboxFeedback">
+
+    <div id="correct" style="left: 270px; top: 200px; width: 290px;">
+    <div class="closeWindow" title="Close">close<span></span></div>
+    <span>Correct.</span><br />You placed the waste hierarchy steps - prevent, reuse, recycle, recover and disposal in the correct order. If you apply these steps when you are using resources, you will go a long way to helping make the workplace more resource efficient.</div>
+
+    <div id="incorrect" style="left: 270px; top: 200px; width: 100px;">
+    <div class="closeWindow" title="Close">close<span></span></div>
+    <span>Incorrect.</span><br />Try again.</div>
+    </div>
+</div>
 
 
-
-
-
-
-<script language="javascript">
-
+<img id="bg" class="introFx fx1" alt="Sky above clouds." src="../../../media/space.jpg" width="675" height="390" />
+<script type="text/javascript">
 var activity = 1;
-
-    if (parent.$) {
+if (parent.$) {
         var frame = parent.$("#myFrame").contents();
-        parent.$(".sort", frame).sortTabs();
-    }
 
-
-
-</script> 
+            parent.$('.introFx', frame).introFx({
+                'afterFx': function() {
+                    parent.$(".sort", frame).sortTabs();	
+                }
+            });
+}    
+</script>
 </body>
 </html>

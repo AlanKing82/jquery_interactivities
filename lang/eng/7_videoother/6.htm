@@ -5,9 +5,165 @@
 <meta http-equiv="Description" content="Online training course" />
 <meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<title>CDT frame updates document</title>
+<title>Drag and drop load scripts</title>
 <link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201507061504_9d3cddc375ca68aec3d1075ae212591b" type="text/css" media="screen" />
 </head>
-<body id="screenBody" onload="parent.onFrameLoad();"><br />
-<p><a target="blank" href="https://docs.google.com/spreadsheets/d/1as7cPnvX2UeKOoWlNjlrMVzGQcufcIbv1T9gzUF83f8/edit#gid=0">CDT frame updates document</a></p></body>
+<body id="screenBody" onload="parent.onFrameLoad();">
+
+
+
+
+
+<style>
+
+
+
+/*
+#incorrect,#correct, .modalWindow #incorrect, .modalWindow #correct {
+    display: none;
+    text-align: left;
+    margin-top:0.5em;
+    font-size:130%;
+    font-weight:bold;
+    padding:0.2em;
+    padding-left:200px;
+    padding-right:0.5em;
+    padding-top:0.2em;
+    background: no-repeat 10px;
+    min-height: 44px;
+	height: auto !important;
+	height: 44px;
+}
+
+
+#incorrect {
+    color:#8B0000;
+
+    background-image: url(../../../media/display_incorrect_bgw.jpg) !important;
+    background-color:transparent !important;
+padding:0px;
+}
+#correct {
+    color:#006400;
+
+    background-image: url(../../../media/display_correct_bgw.jpg) !important;
+    background-color:transparent !important;
+padding:0px;
+}
+
+
+.Submit{
+    background:url(../../../media/input_up.jpg) no-repeat;
+    cursor:pointer;
+    width: 81px;
+    height: 24px;
+    border: none;
+outline: none;  hide dotted outline in Firefox 
+}
+
+.Submit:active{
+    background:url(../../../media/input_down.jpg) no-repeat;
+    cursor:pointer;
+    width: 81px;
+    height: 24px;
+    border: none;
+
+}
+#sort-list li
+{
+   list-style:none;
+padding-left:0px; 
+   background: url(../../../media/act_bar_middle.png) 0 0em no-repeat;
+    background-color:transparent;
+height:29px;
+width:460px;
+padding:8px 0px 0px 30px;
+margin:0;
+}
+
+
+
+body {
+    color:#000;
+    font-family:Arial, Helvetica, sans-serif !important;
+    font-size:100% !important;
+    padding:0;
+    margin:0;
+    background-color:transparent;
+}
+p{font-size:10pt}
+
+h1{
+font-size:12pt;
+color:#2D5B6D;
+}
+
+li{
+font-size:10pt;
+padding:0px 0px 0px 30px;
+color:#ffffff;
+font-weight:bold;
+}
+
+.textLong, .text, .textRight {
+    background:none;
+    padding:10px;
+    padding-bottom:0;
+}
+*/
+    
+</style>
+
+</head>
+<body id="screenBody" onload="parent.onFrameLoad();">
+
+<script src="../../../SCOFunctions/jquery.min.js"></script>
+<script src="../../../SCOFunctions/jquery-ui.custom.min.js"></script>
+<script src="../../../SCOFunctions/jquery.ui.touch-punch.min.js"></script>
+
+
+
+<div style="padding-top: 10px; padding-left: 10px" class="ulDesc">
+<h1>loadExtraScripts</h1>
+<p>Can you click and drag them into the correct order?</p>
+
+    <ul id="sort-list">
+    <li id="1" class="sort">Wet hands with comfortably hot water</li>
+    <li id="2" class="sort">Lather with liquid soap</li>
+    <li id="3" class="sort">Clean nails with a nail brush</li>
+    <li id="4" class="sort">Rinse thoroughly</li>
+    <li id="5" class="sort">Dry hygienically with paper towels or air dryer</li>
+    </ul>
+
+<input value="Submit" class="Submit" id="sortSubmit" type="button" /> 
+<div class="cleaner"></div></div>
+
+<div style="padding-top: 30px; padding-left: 65px; font-size: 12pt" id="correct" class="final_result">Correct. <p>Please continue.</p></div>
+
+<div style="padding-top: 30px; padding-left: 65px; font-size: 12pt" id="incorrect" class="final_result">Incorrect. <p>Try again.</p></div>
+
+<div id="attemptsOver" style="left: 270px; top: 200px; width: 260px;">
+<span>You are out of attempts.</span><br />
+     installing self-cleaning windows avoids the need to clean the windows, whilst cleaning windows from the ground avoids the need for work at height. Using a&nbsp;secure working platform is more likely to prevent a fall than using a ladder, but a ladder can be used safely in some circumstances.
+<br /><span>Please see tabs for correct order.</span>
+</div>
+
+
+
+
+
+
+<script language="javascript">
+
+var activity = 1;
+
+    if (parent.$) {
+        var frame = parent.$("#myFrame").contents();
+        parent.$(".sort", frame).sortTabs({'noOfAttempts': 3});
+    }
+
+
+
+</script> 
+</body>
 </html>
