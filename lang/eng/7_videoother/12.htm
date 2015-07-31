@@ -7,92 +7,37 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <title>Drag and drop load scripts</title>
 <link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201507061504_9d3cddc375ca68aec3d1075ae212591b" type="text/css" media="screen" />
+</head>
+<body id="screenBody" onload="parent.onFrameLoad();">
+
 <script src="../../../SCOFunctions/jquery.min.js"></script>
 <script src="../../../SCOFunctions/jquery-ui.custom.min.js"></script>
 <script src="../../../SCOFunctions/jquery.ui.touch-punch.min.js"></script>
-<style><!--
-.Submit {
-	
-BORDER-RIGHT: medium none; 
-BORDER-TOP: medium none; 
-BACKGROUND-color: #ececec; 
-LEFT: 520px; 
-BORDER-LEFT: medium none; 
-WIDTH: 81px; 
-CURSOR: pointer; 
-COLOR: #555; 
-BORDER-BOTTOM: medium none; 
-POSITION: absolute; 
-TOP: 291px; 
-HEIGHT: 24px; 
-OUTLINE: none
-}
-	
-.Submit:hover {
-	
-BORDER-RIGHT: medium none; 
-BORDER-TOP: medium none; 
-BACKGROUND-color: #d7d7d7; 
-BORDER-LEFT: medium none; 
-WIDTH: 81px; 
-CURSOR: pointer; 
-BORDER-BOTTOM: medium none; 
-HEIGHT: 24px
-}
-	
-#sortList LI {
 
-
-MARGIN: 3px; 
-WIDTH: 442px; 
-background-color:#969696;
-color:#fff;
-
-	
-}
-
-ul li {
-  background: none;
-  list-style: none;
-}
-
-div.a
-{
-        width:280px;
-        float:left;
-        margin:0 1%;
-        
-
-}
-
-	
-.activityFeedback {
-	
-FONT-SIZE: 120%; 
-LEFT: 300px; 
-POSITION: absolute; 
-TOP: 100px;
-	
-}
---></style>
 <div id="whiteBoxWrap" class="introFx fx2 width100">
 <div class="whiteBox">
 <div class="boxContent">
 <div class="t"></div>
-<h1 class="width45">Waste hierarchy in action</h1>
-<p>We must follow the waste hierarchy when we are using resources.</p>
-<div style="margin-top: 2px;">
-<div class="a">
-<ul id="sortList">
-<li id="3" class="sort rounded">Recycle. (You should only consider this option when prevention and reuse have been ruled out). If you can&rsquo;t recycle, then&hellip;.</li>
-<li id="2" class="sort rounded">Consider if the item can be reused. If you can&rsquo;t reuse then&hellip;.</li>
-<li id="5" class="sort rounded">Dispose responsibly. If none of the options higher up in the waste hierarchy are available, only then may this option be used.</li>
-<li id="1" class="sort rounded">Prevent waste wherever possible. If you can&rsquo;t prevent, then&hellip;.</li>
-<li id="4" class="sort rounded">Recover a value (eg energy). If you can&rsquo;t recover, then&hellip;.</li>
-</ul>
+<h1 class="width45">predefined order set by user</h1>
+<p class="width60">We must follow the waste hierarchy when we are using resources. </p>
+
+<br />
+
+<div id="sortWrap">
+    <ol id="sort-list">
+        <li class="sort" id="sort2">(order1)<b> user set id2</b> -Consider if the item can be reused. If you can&rsquo;t reuse then&hellip;.</li>
+        <li class="sort" id="sort4">(order2)<b> user set id4</b> Recover a value (eg energy). If you can&rsquo;t recover, then&hellip;.</li>
+        <li class="sort" id="sort1">(order3)<b> user set id1</b> Prevent waste wherever possible. If you can&rsquo;t prevent, then&hellip;.</li>
+        <li class="sort" id="sort5">(order4)<b> user set id5</b> Dispose responsibly. If none of the options higher up in the waste hierarchy are available, only then may this option be used.</li>
+        <li class="sort" id="sort3">(order5)<b> user set id3</b> Recycle. (You should only consider this option when prevention and reuse have been ruled out). If you can&rsquo;t recycle, then&hellip;.</li>
+    </ol>
+    <input class="btn" id="sortSubmit" value="submit" type="button" />
 </div>
-</div>
-<dl class="noteExpand expandMiddle" style="position: absolute; left: 380px; top: 8px;"><dd class="interact_img"></dd><dt>Interact</dt><dd>Can you order the steps involved?</dd></dl><input class="Submit" value="Submit" type="button" />
+
+<dl class="noteExpand expandMiddle" style="position: absolute; left: 380px; top: 10px;">
+<dd class="interact_img"></dd><dt>Interact</dt><dd>Can you order the steps involved?<br />You have 3 attempts.</dd>
+</dl>
+
 <div class="cleaner"></div>
 </div>
 <div class="b">
@@ -100,65 +45,39 @@ TOP: 100px;
 </div>
 </div>
 </div>
-<div style="left: 270px; top: 200px; width: 360px; position: absolute; z-index: 2;" class="whiteboxFeedback">
-<div id="correct" class="final_result">
-<div class="hotspotMinorCloseWindow" title="Close">close<span></span></div>
-<span>Correct.</span><br />You placed the waste hierarchy steps - prevent, reuse, recycle, recover and disposal in the correct order. If you apply these steps when you are using resources, you will go a long way to helping make the workplace more resource efficient.</div>
-<div id="incorrect" class="final_result">
-<div class="hotspotMinorCloseWindow" title="Close">close<span></span></div>
-<span>Incorrect.</span><br />Try again.</div>
-</div>
+
+
+    <div class="whiteboxFeedback">
+
+    <div id="correct" style="left: 270px; top: 200px; width: 290px;">
+    <div class="closeWindow" title="Close">close<span></span></div>
+    <span>Correct.</span><br />You placed the waste hierarchy steps - prevent, reuse, recycle, recover and disposal in the correct order. If you apply these steps when you are using resources, you will go a long way to helping make the workplace more resource efficient.</div>
+
+    <div id="incorrect" style="left: 270px; top: 200px; width: 160px;">
+    <div class="closeWindow" title="Close">close<span></span></div>
+    <span>Incorrect.</span><br />Try again.</div>
+
+    <div id="attemptsOver" style="left: 270px; top: 200px; width: 260px;">
+    <div class="closeWindow" title="Close">close<span></span></div>
+    <span>You are out of attempts.</span><br />
+     If you apply these steps when you are using resources, you will go a long way to helping make the workplace more resource efficient.
+    <br /><span>Please see tabs for correct order.</span></div>
+    </div>
+
+<div id="sortFeedbackContainer"></div>
+
+
 <img id="bg" class="introFx fx1" alt="Sky above clouds." src="../../../media/space.jpg" width="675" height="390" />
-<script type="text/javascript">// <![CDATA[
+<script type="text/javascript">
 var activity = 1;
-    if (parent.$) {
+if (parent.$) {
         var frame = parent.$("#myFrame").contents();
-parent.$(".hotspotsMinor a", frame).hotspotMinor();
-        parent.$('.introFx', frame).introFx({
+            parent.$('.introFx', frame).introFx({
                 'afterFx': function() {
-                    sortTabs();
+                    parent.$(".sort", frame).sortTabs({'noOfAttempts': 3, 'showCorrectAnswers': true, 'shuffle': false });	
                 }
-});
-}
-
-function sortTabs(){
-   var ans_array = new Array()
-    var user_array = new Array()
-self.parent.disable();
-   $(".sort").each(function(i){
-		ans_array[i] = i+1
-		user_array[i] = 0
-	});
-$("#sortList").sortable({
-      update : function () {
-	  $(".sort").each(function(j){
-	   user_array[j] = $('li').get(j).id
-$("#incorrect").hide(); 
-	  });
-      }
-});
-
-
-
-
-function checkSort(){
-		if(ans_array.toString() == user_array.toString()){
-			$("#sortList").attr('disabled', 'disabled').sortable( "disable" )
-			 $("#correct").show();
-$("#incorrect").hide();  
- self.parent.enable();
-		}else{
-
-			 $("#incorrect").show(); 
-		}
-	}  	
-$('.Submit').click(function() {
-		checkSort();
-	});	
- $(function() { 
-     $( "#sortList" ).sortable({ containment: "window", tolerance:"pointer" }); 
- });
-}
-// ]]></script>
+            });
+}    
+</script>
 </body>
 </html>

@@ -1006,6 +1006,7 @@ div#sortWrap ol li.correctOrder{
 #sortFeedbackContainer{
     height:385px;
     width:675px;
+    position:absolute;
 }
 
 #sortWrap .btn {
