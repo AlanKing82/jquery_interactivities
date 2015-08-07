@@ -6,77 +6,53 @@
 <meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <title>Drag and drop load scripts</title>
-<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201507061504_9d3cddc375ca68aec3d1075ae212591b" type="text/css" media="screen" />
-</head>
-<body id="screenBody" onload="parent.onFrameLoad();">
-<style>
-<style>
-ol li {background-image:none;}
-
-.ui-state-highlight { height: 65px; width:138px;}
-#sort-list li .ui-state-highlight {
-	border: 1px solid red;
-	background-color: red;
-    background-image: none;
-}  
-#match-list, #sort-list {margin:0px; padding:0px;}
-#match-list li, #sort-list li {margin:0px; padding:0px;}   
-#sort-to-match  h5 {margin:7px 0px; padding:0px 0px;}    
-#sort-to-match h5{ 
-    color: #203947;
-    font-weight: bold; 
-    font-size:98%;
-    }     
-#sort-list li, #match-list li
-{
-   list-style: none;
-   font-weight: bold;
-   font-size: 1em;
-}    
-#sort-list li { 
-    z-index: 5; 
-    opacity: 0.9;
-    display:inline-block;
-    wdith:138px;
-}
-  
-#match-list li {
-    color: #203947; 
-    border-top:1px solid #dbdbdc;
-    border-bottom:1px solid #f6f6f6;
-}      
-#match-list li span { 
-    position:relative;
-    top:1.25em;
-}
-
-#sortWrap{
-position:absolute;
-    left:330px;
-    top:20px;
-}
-    
-.btn {
-    position: absolute;
-    left: 530px;
-    top: 330px; 
-}
- 
-</style>
-
-<script src="../../../SCOFunctions/jquery.min.js"></script>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201507061504_9d3cddc375ca68aec3d1075ae212591b" type="text/css" media="screen" /><script src="../../../SCOFunctions/jquery.min.js"></script>
 <script src="../../../SCOFunctions/jquery-ui.custom.min.js"></script>
 <script src="../../../SCOFunctions/jquery.ui.touch-punch.min.js"></script>
+</head>
+<body id="screenBody" onload="parent.onFrameLoad();">
 
-<div class="introFx fx2 width40" id="whiteBoxWrap">
+
+<div class="introFx fx2 width100" id="whiteBoxWrap">
 <div class="whiteBox">
-<div class="boxContent">
+<div class="boxContent" style="height: 323px;">
 <div class="t"></div>
-<h1>Test your knowledge</h1>
-<p>Below are some options for cleaning the outside of upper storey windows. <br />Arrange the options in order, based on the hierarchy of control. Select the back arrow if you want to read the information on the previous screen again.</p>
-<dl class="noteExpand expandShort">
+<h1 class="width50">Who does it affect?</h1>
+<p class="width65">The perception of work at height is that it only affects people who work in industries such as construction or maintenance. However, working from height affects people across all industry sectors.</p>
+<dl class="noteExpand expandShort" style="left: 420px; top: 25px; position: absolute; z-index: 3;">
 <div class="interact_img"></div>
-<dt>Interact</dt><dd>Click and drag the steps <br />below into the correct order.</dd></dl>
+<dt>Interact</dt><dd>Click and drag the images <br />below into the correct order.</dd></dl>
+
+
+<div id="sortWrap">
+    <div id="sortImgWrap">
+        <ul id="sort-list">
+            <li class="sort">
+                <img  src="../../../media/industry01.jpg" />
+                <p>Retail</p>
+            </li>
+            <li class="sort">
+                <img  src="../../../media/industry02.jpg" />
+                <p>Education</p></li>
+            <li class="sort">
+                <img  src="../../../media/industry03.jpg" />
+                <p>Health Services</p></li>
+            <li class="sort">
+                <img  src="../../../media/industry04.jpg" />
+                <p>Agriculture</p>
+            </li>
+        </ul>
+    </div>     
+    <div id="matchText">    
+        <ul id="match-list">
+            <li>800 falls reported per year</li>
+            <li>600 falls reported per year</li>
+            <li>400 falls reported per year</li>
+            <li>100 falls reported per year</li>
+        </ul>
+    </div> 
+       <input class="btn"  id="sortSubmit" type="button" value="submit" /> 
+</div>  
 
 
 <div class="cleaner"></div>
@@ -86,72 +62,40 @@ position:absolute;
 </div>
 </div>
 </div>
-
-<div class="introFx fx3">
-<div id="sort-to-match">
-<div class="column1" style="position: absolute; width: 150px; top: 15px; left: 280px; height: 320px; display: block;">
-<h5 style="text-align: center;">Reported Falls</h5>
-<ol id="match-list" style="text-align: right;">
-<li><span>800 per year</span></li>
-<li><span>600 per year</span></li>
-<li><span>400 per year</span></li>
-<li><span>100 per year</span></li>
-</ol>
-</div>
-</div>
-
-
-<div id="sortWrap" class="width25">
-<ol id="sort-list">
-<li class="sort"><img title="Health services" alt="Health services" src="../../../media/industry01.jpg" /></li>
-<li class="sort"><img title="Health services" alt="Health services" src="../../../media/industry02.jpg" /></li>
-<li class="sort"><img title="Health services" alt="Health services" src="../../../media/industry03.jpg" /></li>
-<li class="sort"><img title="Health services" alt="Health services" src="../../../media/industry04.jpg" /></li>
-</ol>
-</div>
-<input class="btn" id="sortSubmit" type="button" value="submit" />
-</div>
-
-
-
-
+<div id="sortFrameContainer">
 <div class="whiteboxFeedback">
-
 <div id="correct" style="width: 300px; top: 200px; left: 115px;">
 <div title="Close" class="closeWindow">close<span></span></div>
 <span>Correct.</span> Yes, installing self-cleaning windows avoids the need to clean the windows, whilst cleaning windows from the ground avoids the need for work at height. Using a&nbsp;secure working platform is more likely to prevent a fall than using a ladder, but a ladder can be used safely in some circumstances. Please continue.
 </div>
-
 <div id="incorrect" style="width: 200px; top: 270px; left: 15px;">
 <div title="Close" class="closeWindow">close<span></span></div>
 <span>Incorrect.</span><br />Try again.</div>
 
-<div id="attemptsOver" style="left: 270px; top: 200px; width: 260px;">
+<div id="attemptsOver" style="left: 270px; top: 100px; width: 260px;">
 <div class="closeWindow" title="Close">close<span></span></div>
 <span>You are out of attempts.</span><br />
      installing self-cleaning windows avoids the need to clean the windows, whilst cleaning windows from the ground avoids the need for work at height. Using a&nbsp;secure working platform is more likely to prevent a fall than using a ladder, but a ladder can be used safely in some circumstances.
 <br /><span>Please see tabs for correct order.</span></div>
-    
 </div>
-
-<div id="sortFeedbackContainer"></div>
-
-
-
-
-<img id="bg" class="introFx fx1" alt="Sky above clouds." src="../../../media/L01S08.png" width="675" height="390" />
+</div>
+<img id="bg" class="introFx fx1" alt="Sky above clouds." src="../../../media/bg_tri.jpg" width="675" height="390" />
 <script type="text/javascript">
 var activity = 1;
 if (parent.$) {
         var frame = parent.$("#myFrame").contents();
 
-            parent.$(".sort", frame).sortTabs({'noOfAttempts': 3 });
-            parent.$('.introFx', frame).introFx({'prevNavButtonDisable': true});
+//            parent.$(".sort", frame).sortTabs({'noOfAttempts': 3, 'showCorrectAnswers': true});
+//            parent.$('.introFx', frame).introFx({'prevNavButtonDisable': true});
     
-        parent.$("#match-list li", frame).css({ 'height':'65px',
-                                                'padding':'0px',
-                                                'margin': '2px 0px'
-                                          });
+            parent.$('.introFx', frame).introFx({
+                'afterFx': function() {
+                    parent.$(".sort", frame).sortTabs({'noOfAttempts': 3, 'showCorrectAnswers': true, 'sortImgs': true});
+                }
+            });
+    
+//$("#sort-list").sortable({containment : $("#sort-list"), tolerance:"pointer"}); 
+
 }    
 </script>
 </body>

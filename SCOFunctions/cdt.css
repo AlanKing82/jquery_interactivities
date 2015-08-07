@@ -931,8 +931,7 @@ color:#ffffff;
 	overflow:hidden;
 }
 
-/* sortable tabs activity */
-
+/* Sortable tabs activity */
 #sort-list li
 {
 	background:#BDEDFF;
@@ -958,7 +957,7 @@ div#sortWrap ol li{
     text-decoration: none;
     border-radius: .5em;
     transition: background-position .3s ease-out;
-    background: #ddd url(../common_images/sortable.png) no-repeat center left;
+    background: #ddd url(../common_images/sortable.png) no-repeat 1.5% 50%;
 }
 
 div#sortWrap ol.itemHeightSmall li{
@@ -970,14 +969,14 @@ div#sortWrap ol.itemHeightMedium li{
 }
 
 div#sortWrap ol li:hover{
-    background: #d0d0d0 url(../common_images/sortable_hover.png) no-repeat center left;
+    background: #d0d0d0 url(../common_images/sortable_hover.png) no-repeat 1.5% 50%;
 }
 
 div#sortWrap ol li.sort{
     counter-increment: li;
 }
 
-div#sortWrap ol li.numberedStyle:before{
+div#sortWrap ol li.correctStyle:before{
     content: counter(li);
     position: absolute; 
     left: -1.3em;
@@ -994,8 +993,8 @@ div#sortWrap ol li.numberedStyle:before{
     transition: all .3s ease-out;
 }
 
-div#sortWrap ol li.numberedStyle{
-  background: url(../common_images/tick_small.png) no-repeat center right;
+div#sortWrap ol li.correctStyle{
+  background: url(../common_images/tick_small.png) no-repeat 99% 50%;
   background-color: #daeaef;
 }
 
@@ -1003,7 +1002,65 @@ div#sortWrap ol li.correctOrder{
     background-image:none;
 }
 
-#sortFeedbackContainer{
+/* Sort Image Tabs */
+div#matchText ul li, 
+div#sortImgWrap ul li{
+    visibility:hidden;
+    border-radius: .5em;
+    float:left;
+    margin: 0px 2.5px;  
+}
+
+div#matchText ul, 
+div#sortImgWrap ul {
+    display:block; 
+    overflow:hidden;
+    position:static; 
+}
+div#matchText ul li{ 
+    padding: 4px 4px 5px 4px;
+    color: #666;
+    background:#fafafa;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    line-height: 125%;
+}
+
+div#sortImgWrap ul li{ 
+    padding: 16px 4px 16px 4px;
+    background: #ddd url(../common_images/sortable_horizontal.png) no-repeat 50% 2%;
+}
+
+div#sortImgWrap ul li:hover{
+    background: #d0d0d0 url(../common_images/sortable_horizontal_hover.png) no-repeat 50% 2%;
+}
+
+div#sortImgWrap ul li img { 
+    float: none;
+}
+
+div#sortImgWrap ul li p { 
+    text-align: center;
+    word-wrap: break-word;
+    font-weight: bold;
+    position: relative;
+    top: 0.8em;
+    padding: 0em;
+    line-height: 115%;
+}
+
+div#sortImgWrap ul li.correctStyle{ /* added - dorota */
+    background: url(../common_images/tick_small.png) no-repeat 98% 95%;
+     background-color: #daeaef;
+}
+
+div#sortWrap ul li.correctOrder{
+    background-image:none;
+}
+
+/* Sort Container */
+#sortFrameContainer{
     height:385px;
     width:675px;
     position:absolute;
@@ -1015,6 +1072,7 @@ div#sortWrap ol li.correctOrder{
     margin-right:30px;
     top:-3px;
     visibility:hidden;
+    z-index: 1;
 }
 
 /* Note small */

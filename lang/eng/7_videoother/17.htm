@@ -17,7 +17,7 @@
 <div class="whiteBox">
 <div class="boxContent" style="height: 323px;">
 <div class="t"></div>
-<h1 class="width50">5 Image sortables</h1>
+<h1 class="width50">Who does it affect?</h1>
 <p class="width65">Hottest man in Ireland. Match these ladeens to text.</p>
 <dl class="noteExpand expandMiddle" style="left: 380px; top: 10px; position: absolute; z-index: 3;">
 <div class="interact_img"></div>
@@ -73,7 +73,7 @@
 <div class="whiteboxFeedback">
 <div id="correct" style="width: 300px; top: 200px; left: 115px;">
 <div title="Close" class="closeWindow">close<span></span></div>
-<span>Correct.</span> Everyone knows Marty is the hottest thing since slice bread.
+<span>Correct.</span> Yes, installing self-cleaning windows avoids the need to clean the windows, whilst cleaning windows from the ground avoids the need for work at height. Using a&nbsp;secure working platform is more likely to prevent a fall than using a ladder, but a ladder can be used safely in some circumstances. Please continue.
 </div>
 <div id="incorrect" style="width: 200px; top: 270px; left: 15px;">
 <div title="Close" class="closeWindow">close<span></span></div>
@@ -82,7 +82,8 @@
 <div id="attemptsOver" style="left: 270px; top: 100px; width: 260px;">
 <div class="closeWindow" title="Close">close<span></span></div>
 <span>You are out of attempts.</span><br />
-     You are listening to too much Joe Brolly. Everyone knows Marty is the hottest thing since slice bread.</span></div>
+     installing self-cleaning windows avoids the need to clean the windows, whilst cleaning windows from the ground avoids the need for work at height. Using a&nbsp;secure working platform is more likely to prevent a fall than using a ladder, but a ladder can be used safely in some circumstances.
+<br /><span>Please see tabs for correct order.</span></div>
 </div>
 </div>
 <img id="bg" class="introFx fx1" alt="Sky above clouds." src="../../../media/bg_tri.jpg" width="675" height="390" />
@@ -90,12 +91,18 @@
 var activity = 1;
 if (parent.$) {
         var frame = parent.$("#myFrame").contents();
-        parent.$('.introFx', frame).introFx({
-            'afterFx': function() {
-                parent.$(".sort", frame).sortTabs({'noOfAttempts': 3, 'showCorrectAnswers': true, 'sortImgs': true});
-            }
-        });
+
+//            parent.$(".sort", frame).sortTabs({'noOfAttempts': 3, 'showCorrectAnswers': true});
+//            parent.$('.introFx', frame).introFx({'prevNavButtonDisable': true});
     
+            parent.$('.introFx', frame).introFx({
+                'afterFx': function() {
+                    parent.$(".sort", frame).sortTabs({'noOfAttempts': 3, 'showCorrectAnswers': true, 'sortImgs': true});
+                }
+            });
+    
+//$("#sort-list").sortable({containment : $("#sort-list"), tolerance:"pointer"}); 
+
 }    
 </script>
 </body>
