@@ -7,76 +7,54 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <title>Drag and drop load scripts</title>
 <link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201507061504_9d3cddc375ca68aec3d1075ae212591b" type="text/css" media="screen" />
+
 </head>
 <body id="screenBody" onload="parent.onFrameLoad();">
-<style>
-<style>
-ol li {background-image:none;}
-
-.ui-state-highlight { height: 65px; width:138px;}
-#sort-list li .ui-state-highlight {
-	border: 1px solid red;
-	background-color: red;
-    background-image: none;
-}  
-#match-list, #sort-list {margin:0px; padding:0px;}
-#match-list li, #sort-list li {margin:0px; padding:0px;}   
-#sort-to-match  h5 {margin:7px 0px; padding:0px 0px;}    
-#sort-to-match h5{ 
-    color: #203947;
-    font-weight: bold; 
-    font-size:98%;
-    }     
-#sort-list li, #match-list li
-{
-   list-style: none;
-   font-weight: bold;
-   font-size: 1em;
-}    
-#sort-list li { 
-    z-index: 5; 
-    opacity: 0.9;
-    display:inline-block;
-    wdith:138px;
-}
-  
-#match-list li {
-    color: #203947; 
-    border-top:1px solid #dbdbdc;
-    border-bottom:1px solid #f6f6f6;
-}      
-#match-list li span { 
-    position:relative;
-    top:1.25em;
-}
-
-#sortWrap{
-position:absolute;
-    left:330px;
-    top:20px;
-}
-    
-.btn {
-    position: absolute;
-    left: 530px;
-    top: 330px; 
-}
- 
-</style>
 
 <script src="../../../SCOFunctions/jquery.min.js"></script>
 <script src="../../../SCOFunctions/jquery-ui.custom.min.js"></script>
 <script src="../../../SCOFunctions/jquery.ui.touch-punch.min.js"></script>
 
-<div class="introFx fx2 width40" id="whiteBoxWrap">
+
+
+<div id="whiteBoxWrap" class="introFx fx2 width100">
 <div class="whiteBox">
 <div class="boxContent">
 <div class="t"></div>
-<h1>Test your knowledge</h1>
-<p>Below are some options for cleaning the outside of upper storey windows. <br />Arrange the options in order, based on the hierarchy of control. Select the back arrow if you want to read the information on the previous screen again.</p>
-<dl class="noteExpand expandShort">
-<div class="interact_img"></div>
-<dt>Interact</dt><dd>Click and drag the steps <br />below into the correct order.</dd></dl>
+<h1 class="width45">showCorrectAnswers/noOfAttempts</h1>
+<p class="width60">Match each of the 3 types of hearing protection described with the types of 
+work people do by dragging the hearing protection to the work task description.</p>
+
+<div id="matchWrap" class="sortWrapText width50">    
+    <ul id="match-list">
+        <li>Disposable ear plugs can be made available in dispensers wherever they are needed.</li>
+        <li>Moulded ear plugs are customised to fit physically, and can be individually tuned to the frequency of noise you need to reduce.</li>
+        <li>Earmuffs stop the sound reaching the ear by covering the whole outer ear with soft ear cushions held together with a head band.</li>
+
+    </ul>
+</div>  
+
+<div id="sortWrap" class="sortWrapText width50">
+    <ol id="sort-list">
+        <li class="sort">Handling carcasses in a cold and <br />noisy abattoir.</li>
+        <li class="sort">Electrical work in a noisy workplace where you still need to be able to give and receive instructions.</li>
+        <li class="sort">Welding in noisy plant rooms for short intervals during the day, whilst wearing a welding mask.</li>
+
+    </ol>
+</div>
+    
+
+    
+    
+    
+    <input class="btn" id="sortSubmit" value="submit" type="button" />
+
+
+<dl class="noteExpand expandMiddle" style="position: absolute; left: 380px; top: 10px;">
+<dd class="interact_img"></dd><dt>Interact</dt><dd>Drag each work task to the corresponding hearing protection.</dd>
+</dl>
+
+
 
 
 <div class="cleaner"></div>
@@ -87,71 +65,36 @@ position:absolute;
 </div>
 </div>
 
-<div class="introFx fx3">
-<div id="sort-to-match">
-<div class="column1" style="position: absolute; width: 150px; top: 15px; left: 280px; height: 320px; display: block;">
-<h5 style="text-align: center;">Reported Falls</h5>
-<ol id="match-list" style="text-align: right;">
-<li><span>800 per year</span></li>
-<li><span>600 per year</span></li>
-<li><span>400 per year</span></li>
-<li><span>100 per year</span></li>
-</ol>
-</div>
-</div>
 
+    <div class="whiteboxFeedback">
 
-<div id="sortWrap" class="width25">
-<ol id="sort-list">
-<li class="sort"><img title="Health services" alt="Health services" src="../../../media/industry01.jpg" /></li>
-<li class="sort"><img title="Health services" alt="Health services" src="../../../media/industry02.jpg" /></li>
-<li class="sort"><img title="Health services" alt="Health services" src="../../../media/industry03.jpg" /></li>
-<li class="sort"><img title="Health services" alt="Health services" src="../../../media/industry04.jpg" /></li>
-</ol>
-</div>
-<input class="btn" id="sortSubmit" type="button" value="submit" />
-</div>
+    <div id="correct" style="left: 270px; top: 200px; width: 290px;">
+    <div class="closeWindow" title="Close">close<span></span></div>
+    <span>Correct.</span><br />You placed the waste hierarchy steps - prevent, reuse, recycle, recover and disposal in the correct order. If you apply these steps when you are using resources, you will go a long way to helping make the workplace more resource efficient.</div>
 
+    <div id="incorrect" style="left: 270px; top: 200px; width: 160px;">
+    <div class="closeWindow" title="Close">close<span></span></div>
+    <span>Incorrect.</span><br />Try again.</div>
 
+    <div id="attemptsOver" style="left: 270px; top: 200px; width: 260px;">
+    <div class="closeWindow" title="Close">close<span></span></div>
+    <span>You are out of attempts.</span><br />
+     If you apply these steps when you are using resources, you will go a long way to helping make the workplace more resource efficient.
+    <br /><span>Please see tabs for correct order.</span></div>
+    </div>
 
+<div id="sortFrameContainer"></div>
 
-<div class="whiteboxFeedback">
-
-<div id="correct" style="width: 300px; top: 200px; left: 115px;">
-<div title="Close" class="closeWindow">close<span></span></div>
-<span>Correct.</span> Yes, installing self-cleaning windows avoids the need to clean the windows, whilst cleaning windows from the ground avoids the need for work at height. Using a&nbsp;secure working platform is more likely to prevent a fall than using a ladder, but a ladder can be used safely in some circumstances. Please continue.
-</div>
-
-<div id="incorrect" style="width: 200px; top: 270px; left: 15px;">
-<div title="Close" class="closeWindow">close<span></span></div>
-<span>Incorrect.</span><br />Try again.</div>
-
-<div id="attemptsOver" style="left: 270px; top: 200px; width: 260px;">
-<div class="closeWindow" title="Close">close<span></span></div>
-<span>You are out of attempts.</span><br />
-     installing self-cleaning windows avoids the need to clean the windows, whilst cleaning windows from the ground avoids the need for work at height. Using a&nbsp;secure working platform is more likely to prevent a fall than using a ladder, but a ladder can be used safely in some circumstances.
-<br /><span>Please see tabs for correct order.</span></div>
-    
-</div>
-
-<div id="sortFeedbackContainer"></div>
-
-
-
-
-<img id="bg" class="introFx fx1" alt="Sky above clouds." src="../../../media/L01S08.png" width="675" height="390" />
+<img id="bg" class="introFx fx1" alt="Sky above clouds." src="../../../media/space.jpg" width="675" height="390" />
 <script type="text/javascript">
 var activity = 1;
 if (parent.$) {
         var frame = parent.$("#myFrame").contents();
-
-            parent.$(".sort", frame).sortTabs({'noOfAttempts': 3 });
-            parent.$('.introFx', frame).introFx({'prevNavButtonDisable': true});
-    
-        parent.$("#match-list li", frame).css({ 'height':'65px',
-                                                'padding':'0px',
-                                                'margin': '2px 0px'
-                                          });
+            parent.$('.introFx', frame).introFx({
+                'afterFx': function() {
+                    parent.$(".sort", frame).sortTabs({'noOfAttempts': 3, 'showCorrectAnswers': true, 'matchTabHeight': 42 });	
+                }
+            });
 }    
 </script>
 </body>

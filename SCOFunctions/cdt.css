@@ -931,7 +931,7 @@ color:#ffffff;
 	overflow:hidden;
 }
 
-/* Sortable tabs activity */
+/* Sortable Tabs */
 #sort-list li
 {
 	background:#BDEDFF;
@@ -939,6 +939,14 @@ color:#ffffff;
 	list-style:none;
 	margin-bottom:10px;
 	padding:1px 10px;
+}
+
+div#sortWrap ol.itemHeightSmall li{
+    padding: 1px 35px 1px 28px;
+}
+
+div#sortWrap ol.itemHeightMedium li{
+    padding: 3px 35px 3px 28px;
 }
 
 div#sortWrap ol {
@@ -958,14 +966,6 @@ div#sortWrap ol li{
     border-radius: .5em;
     transition: background-position .3s ease-out;
     background: #ddd url(../common_images/sortable.png) no-repeat 1.5% 50%;
-}
-
-div#sortWrap ol.itemHeightSmall li{
-    padding: 1px 35px 1px 28px;
-}
-
-div#sortWrap ol.itemHeightMedium li{
-    padding: 3px 35px 3px 28px;
 }
 
 div#sortWrap ol li:hover{
@@ -1002,22 +1002,22 @@ div#sortWrap ol li.correctOrder{
     background-image:none;
 }
 
-/* Sort Image Tabs */
-div#matchText ul li, 
-div#sortImgWrap ul li{
+/* Two column sort to match (Image) */
+div#matchWrap ul li, 
+div#sortWrap.sortWrapImg ul li{
     visibility:hidden;
     border-radius: .5em;
     float:left;
     margin: 0px 2.5px;  
 }
 
-div#matchText ul, 
-div#sortImgWrap ul {
+div#sortWrap.sortWrapImg ul {
     display:block; 
     overflow:hidden;
     position:static; 
 }
-div#matchText ul li{ 
+
+div#matchWrap ul li{ 
     padding: 4px 4px 5px 4px;
     color: #666;
     background:#fafafa;
@@ -1027,20 +1027,20 @@ div#matchText ul li{
     line-height: 125%;
 }
 
-div#sortImgWrap ul li{ 
+div#sortWrap.sortWrapImg ul li{ 
     padding: 16px 4px 16px 4px;
     background: #ddd url(../common_images/sortable_horizontal.png) no-repeat 50% 2%;
 }
 
-div#sortImgWrap ul li:hover{
+div#sortWrap.sortWrapImg ul li:hover{
     background: #d0d0d0 url(../common_images/sortable_horizontal_hover.png) no-repeat 50% 2%;
 }
 
-div#sortImgWrap ul li img { 
+div#sortWrap.sortWrapImg ul li img { 
     float: none;
 }
 
-div#sortImgWrap ul li p { 
+div#sortWrap.sortWrapImg ul li p { 
     text-align: center;
     word-wrap: break-word;
     font-weight: bold;
@@ -1050,13 +1050,44 @@ div#sortImgWrap ul li p {
     line-height: 115%;
 }
 
-div#sortImgWrap ul li.correctStyle{ /* added - dorota */
+div#sortWrap.sortWrapImg ul li.correctStyle{ 
     background: url(../common_images/tick_small.png) no-repeat 98% 95%;
      background-color: #daeaef;
 }
 
-div#sortWrap ul li.correctOrder{
+div#sortWrap.sortWrapImg  ul li.correctOrder{
     background-image:none;
+}
+
+/* Two column sort to match (Text) */
+div#sortWrap.sortWrapText ol li, 
+div#matchWrap.sortWrapText ul li { 
+    line-height: 120%;
+} 
+
+div#sortWrap.sortWrapText{ 
+  position: relative;
+  float:left;
+  display: inline-block;
+}
+
+div#sortWrap.sortWrapText ul{ 
+    overflow: visible;
+} 
+
+div#matchWrap.sortWrapText{
+  position: relative;
+  float:left;   
+  display: inline-block;
+} 
+
+div#matchWrap.sortWrapText ul li 
+{
+    color: #5e93b1;
+    padding: 4px 10px 5px 10px;
+    margin: 0px 5px 3px;
+    text-align: left;
+    float:none;
 }
 
 /* Sort Container */
@@ -1066,11 +1097,11 @@ div#sortWrap ul li.correctOrder{
     position:absolute;
 }
 
-#sortWrap .btn {
+/* Sort submit button */
+.btn#sortSubmit {
     position:relative;
     float:right;
     margin-right:30px;
-    top:-3px;
     visibility:hidden;
     z-index: 1;
 }
@@ -1199,12 +1230,7 @@ img.question { margin-top: 20px; position:relative}
 	background-image:url(../common_images/correct2.gif)!important;
 }
 
-
-
-
-
-  
- /* Click object/person to reveal Activity */ 
+/* Click object/person to reveal Activity */ 
 dt #side_image{
 	border:none; MARGIN-TOP: 0px; padding-LEFT: 60px; 
 	FLOAT: left;   MARGIN-left: 0px;  TEXT-ALIGN: center

@@ -24,8 +24,8 @@
 <dt>Interact</dt><dd>Click and drag the images <br />below into the correct order.</dd></dl>
 
 
-<div id="sortWrap">
-    <div id="sortImgWrap">
+
+    <div id="sortWrap" class="sortWrapImg">
         <ul id="sort-list">
             <li class="sort">
                 <img  src="../../../media/industry01.jpg" />
@@ -43,7 +43,8 @@
             </li>
         </ul>
     </div>     
-    <div id="matchText">    
+    
+    <div id="matchWrap">    
         <ul id="match-list">
             <li>800 falls reported per year</li>
             <li>600 falls reported per year</li>
@@ -51,8 +52,8 @@
             <li>100 falls reported per year</li>
         </ul>
     </div> 
-       <input class="btn"  id="sortSubmit" type="button" value="submit" /> 
-</div>  
+       <input class="btn" id="sortSubmit" type="button" value="submit" /> 
+
 
 
 <div class="cleaner"></div>
@@ -90,7 +91,7 @@ if (parent.$) {
     
             parent.$('.introFx', frame).introFx({
                 'afterFx': function() {
-                    parent.$(".sort", frame).sortTabs({'noOfAttempts': 3, 'showCorrectAnswers': true, 'sortImgs': true});
+                    parent.$(".sort", frame).sortTabs({'noOfAttempts': 3, 'showCorrectAnswers': true, 'matchImgs': true});
                 }
             });
     

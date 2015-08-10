@@ -24,8 +24,7 @@
 <dt>Interact</dt><dd>Sort them out. You have 3 attempts.</dd></dl>
 
 
-<div id="sortWrap">
-    <div id="sortImgWrap">
+<div id="sortWrap" class="sortWrapImg">
         <ul id="sort-list">
             <li class="sort">
                 <img  src="../../../media/hot01.png" />
@@ -41,7 +40,7 @@
             </li>
             <li class="sort">
                 <img  src="../../../media/hot03.png" />
-                <p>Marty M.</p>
+                <p>Marty W.</p>
             </li>
             <li class="sort">
                 <img  src="../../../media/hot05.png" />
@@ -49,7 +48,7 @@
             </li>
         </ul>
     </div>     
-    <div id="matchText">    
+    <div id="matchWrap">    
         <ul id="match-list">
             <li>Phwoarr!</li>
             <li>Smokin</li>
@@ -58,8 +57,8 @@
             <li>Gombeen</li>
         </ul>
     </div> 
-       <input class="btn"  id="sortSubmit" type="button" value="submit" /> 
-</div>  
+    <input class="btn"  id="sortSubmit" type="button" value="submit" /> 
+
 
 
 <div class="cleaner"></div>
@@ -92,7 +91,7 @@ if (parent.$) {
         var frame = parent.$("#myFrame").contents();
         parent.$('.introFx', frame).introFx({
             'afterFx': function() {
-                parent.$(".sort", frame).sortTabs({'noOfAttempts': 3, 'showCorrectAnswers': true, 'sortImgs': true});
+                parent.$(".sort", frame).sortTabs({'noOfAttempts': 3, 'showCorrectAnswers': true, 'matchImgs': true});
             }
         });
     
