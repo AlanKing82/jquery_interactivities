@@ -953,7 +953,6 @@ div#sortWrap ol {
     counter-reset: li; /* Initiate a counter */
     list-style: none; /* Remove default numbering */
     *list-style: decimal; /* Keep using default numbering for IE6/7 */
-    text-shadow: 0 1px 0 rgba(255,255,255,.5);
 }
 
 div#sortWrap ol li{
@@ -961,7 +960,7 @@ div#sortWrap ol li{
     padding: 4px 35px 5px 28px;
     margin: 0px 20px 3px 20px; 
     visibility: hidden;  
-    color: #444;
+    color: #000;
     text-decoration: none;
     border-radius: .5em;
     transition: background-position .3s ease-out;
@@ -976,7 +975,7 @@ div#sortWrap ol li.sort{
     counter-increment: li;
 }
 
-div#sortWrap ol li.correctStyle:before{
+div#sortWrap ol li.numberStyle:before{
     content: counter(li);
     position: absolute; 
     left: -1.3em;
@@ -993,13 +992,13 @@ div#sortWrap ol li.correctStyle:before{
     transition: all .3s ease-out;
 }
 
-div#sortWrap ol li.correctStyle{
-  background: url(../common_images/tick_small.png) no-repeat 99% 50%;
-  background-color: #daeaef;
+div#sortWrap ol li.itemCorrectStyle{
+    background: #daeaef url(../common_images/tick_small.png) no-repeat 99% 50%;
 }
 
-div#sortWrap ol li.correctOrder{
-    background-image:none;
+div#sortWrap ol li.allCorrectStyle{
+    background-color: #daeaef;
+    background-image: none;
 }
 
 /* Two column sort to match (Image) */
@@ -1019,10 +1018,10 @@ div#sortWrap.sortWrapImg ul {
 
 div#matchWrap ul li{ 
     padding: 4px 4px 5px 4px;
-    color: #666;
-    background:#fafafa;
+    color: #000;
+    background:#daeaef;
     text-align: center;
-    font-weight: bold;
+/*    font-weight: bold;*/
     display: block;
     line-height: 125%;
 }
@@ -1050,13 +1049,14 @@ div#sortWrap.sortWrapImg ul li p {
     line-height: 115%;
 }
 
-div#sortWrap.sortWrapImg ul li.correctStyle{ 
+div#sortWrap.sortWrapImg ul li.itemCorrectStyle{ 
     background: url(../common_images/tick_small.png) no-repeat 98% 95%;
     background-color: #daeaef;
 }
 
-div#sortWrap.sortWrapImg  ul li.correctOrder{
+div#sortWrap.sortWrapImg ul li.allCorrectStyle{
     background-image:none;
+    background-color: #daeaef;
 }
 
 /* Two column sort to match (Text) */
@@ -1083,7 +1083,7 @@ div#matchWrap.sortWrapText{
 
 div#matchWrap.sortWrapText ul li 
 {
-    color: #5e93b1;
+    color: #000;
     padding: 4px 10px 5px 10px;
     margin: 0px 5px 3px;
     text-align: left;
@@ -1101,9 +1101,16 @@ div#matchWrap.sortWrapText ul li
 .btn#sortSubmit {
     position:relative;
     float:right;
-    margin-right:30px;
+    margin-right:25px;
     visibility:hidden;
     z-index: 1;
+}
+
+#matchWrap.sortWrapImg ul#match-list{
+    margin-bottom: 5px;
+    padding: 1px 5px 1px 0px;
+/*    position: relative;*/
+    display: inline-block;
 }
 
 /* Note small */
