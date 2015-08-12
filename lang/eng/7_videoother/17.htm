@@ -6,93 +6,61 @@
 <meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <title>Drag and drop load scripts</title>
-<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201507061504_9d3cddc375ca68aec3d1075ae212591b" type="text/css" media="screen" />
-<script src="../../../SCOFunctions/jquery.min.js"></script>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201507061504_9d3cddc375ca68aec3d1075ae212591b" type="text/css" media="screen" /><script src="../../../SCOFunctions/jquery.min.js"></script>
 <script src="../../../SCOFunctions/jquery-ui.custom.min.js"></script>
 <script src="../../../SCOFunctions/jquery.ui.touch-punch.min.js"></script>
-<style><!--
-.Submit {
-	
-BORDER-RIGHT: medium none; 
-BORDER-TOP: medium none; 
-BACKGROUND-color: #ececec; 
-LEFT: 520px; 
-BORDER-LEFT: medium none; 
-WIDTH: 81px; 
-CURSOR: pointer; 
-COLOR: #555; 
-BORDER-BOTTOM: medium none; 
-POSITION: absolute; 
-TOP: 291px; 
-HEIGHT: 24px; 
-OUTLINE: none
-}
-	
-.Submit:hover {
-	
-BORDER-RIGHT: medium none; 
-BORDER-TOP: medium none; 
-BACKGROUND-color: #d7d7d7; 
-BORDER-LEFT: medium none; 
-WIDTH: 81px; 
-CURSOR: pointer; 
-BORDER-BOTTOM: medium none; 
-HEIGHT: 24px
-}
-	
-#sortList LI {
+</head>
+<body id="screenBody" onload="parent.onFrameLoad();">
 
 
-MARGIN: 3px; 
-WIDTH: 442px; 
-background-color:#969696;
-color:#fff;
-
-	
-}
-
-ul li {
-  background: none;
-  list-style: none;
-}
-
-div.a
-{
-        width:280px;
-        float:left;
-        margin:0 1%;
-        
-
-}
-
-	
-.activityFeedback {
-	
-FONT-SIZE: 120%; 
-LEFT: 300px; 
-POSITION: absolute; 
-TOP: 100px;
-	
-}
---></style>
-<div id="whiteBoxWrap" class="introFx fx2 width100">
+<div class="introFx fx2 width100" id="whiteBoxWrap">
 <div class="whiteBox">
-<div class="boxContent">
+<div class="boxContent" style="height: 323px;">
 <div class="t"></div>
-<h1 class="width45">Waste hierarchy in action</h1>
-<p>We must follow the waste hierarchy when we are using resources.</p>
-<div style="margin-top: 2px;">
-<div class="a">
-<ul id="sortList">
-<li id="3" class="sort rounded">Recycle. (You should only consider this option when prevention and reuse have been ruled out). If you can&rsquo;t recycle, then&hellip;.</li>
-<li id="2" class="sort rounded">Consider if the item can be reused. If you can&rsquo;t reuse then&hellip;.</li>
-<li id="5" class="sort rounded">Dispose responsibly. If none of the options higher up in the waste hierarchy are available, only then may this option be used.</li>
-<li id="1" class="sort rounded">Prevent waste wherever possible. If you can&rsquo;t prevent, then&hellip;.</li>
-<li id="4" class="sort rounded">Recover a value (eg energy). If you can&rsquo;t recover, then&hellip;.</li>
-</ul>
-</div>
-</div>
-<dl class="noteExpand expandMiddle" style="position: absolute; left: 380px; top: 8px;"><dd class="interact_img"></dd><dt>Interact</dt><dd>Can you order the steps involved?</dd></dl><input class="Submit" value="Submit" type="button" />
+<h1 class="width50">5 Image sortables - no shuffle</h1>
+<p class="width65">Hottest man in Ireland. Match these ladeens to text.</p>
+<dl class="noteExpand expandMiddle" style="left: 380px; top: 10px; position: absolute; z-index: 3;">
+<div class="interact_img"></div>
+<dt>Interact</dt><dd>Sort them out. You have 3 attempts.</dd></dl>
+
+
+<div id="sortWrap" class="sortWrapImg">
+        <ul id="sort-list">
+            <li id="sort2" class="sort">
+                <img  src="../../../media/hot02.png" />
+                <p>Marty M.</p>
+            </li>
+            <li id="sort1" class="sort">
+                <img  src="../../../media/hot01.png" />
+                <p>Richie</p>
+            </li>
+            <li id="sort4" class="sort">
+                <img  src="../../../media/hot03.png" />
+                <p>Big Tom</p>
+            </li>
+            <li id="sort5" class="sort">
+                <img  src="../../../media/hot05.png" />
+                <p>Marty W.</p>
+            </li>
+            <li id="sort3" class="sort">
+                <img  src="../../../media/hot04.png" />
+                <p>Tubs</p>
+            </li>
+        </ul>
+    </div>     
+    <div id="matchWrap">    
+        <ul id="match-list">
+            <li>Phwoarr!</li>
+            <li>Smokin</li>
+            <li>Red hot</li>
+            <li>Not what he used to be</li>
+            <li>Gombeen</li>
+        </ul>
+    </div> 
+    <input class="btn"  id="sortSubmit" type="button" value="submit" /> 
+
+
+
 <div class="cleaner"></div>
 </div>
 <div class="b">
@@ -100,65 +68,39 @@ TOP: 100px;
 </div>
 </div>
 </div>
-<div style="left: 270px; top: 200px; width: 360px; position: absolute; z-index: 2;" class="whiteboxFeedback">
-<div id="correct" class="final_result">
-<div class="hotspotMinorCloseWindow" title="Close">close<span></span></div>
-<span>Correct.</span><br />You placed the waste hierarchy steps - prevent, reuse, recycle, recover and disposal in the correct order. If you apply these steps when you are using resources, you will go a long way to helping make the workplace more resource efficient.</div>
-<div id="incorrect" class="final_result">
-<div class="hotspotMinorCloseWindow" title="Close">close<span></span></div>
-<span>Incorrect.</span><br />Try again.</div>
+<div id="sortFrameContainer">
+<div class="whiteboxFeedback">
+<div id="correct" style="width: 300px; top: 200px; left: 115px;">
+<div title="Close" class="closeWindow">close<span></span></div>
+<span>Correct.</span> Everyone knows Marty is the hottest thing since sliced bread.
 </div>
-<img id="bg" class="introFx fx1" alt="Sky above clouds." src="../../../media/space.jpg" width="675" height="390" />
-<script type="text/javascript">// <![CDATA[
+<div id="incorrect" style="width: 200px; top: 270px; left: 15px;">
+<div title="Close" class="closeWindow">close<span></span></div>
+<span>Incorrect.</span><br />Try again.</div>
+
+<div id="attemptsOver" style="left: 270px; top: 100px; width: 260px;">
+<div class="closeWindow" title="Close">close<span></span></div>
+<span>You are out of attempts.</span><br />
+     Don't mind Joe Brolly. Everyone knows Marty is the hottest thing since sliced bread.</span></div>
+</div>
+</div>
+<img id="bg" class="introFx fx1" alt="Sky above clouds." src="../../../media/bg_tri.jpg" width="675" height="390" />
+<script type="text/javascript">
 var activity = 1;
-    if (parent.$) {
+if (parent.$) {
         var frame = parent.$("#myFrame").contents();
-parent.$(".hotspotsMinor a", frame).hotspotMinor();
+    
+//        parent.$(".sort", frame).sortTabs({'noOfAttempts': 3, 'showCorrectAnswers': true, 'matchImgs': true});
+//        parent.$('.introFx', frame).introFx({'prevNavButtonDisable': true});
+    
+    
         parent.$('.introFx', frame).introFx({
-                'afterFx': function() {
-                    sortTabs();
-                }
-});
-}
-
-function sortTabs(){
-   var ans_array = new Array()
-    var user_array = new Array()
-self.parent.disable();
-   $(".sort").each(function(i){
-		ans_array[i] = i+1
-		user_array[i] = 0
-	});
-$("#sortList").sortable({
-      update : function () {
-	  $(".sort").each(function(j){
-	   user_array[j] = $('li').get(j).id
-$("#incorrect").hide(); 
-	  });
-      }
-});
-
-
-
-
-function checkSort(){
-		if(ans_array.toString() == user_array.toString()){
-			$("#sortList").attr('disabled', 'disabled').sortable( "disable" )
-			 $("#correct").show();
-$("#incorrect").hide();  
- self.parent.enable();
-		}else{
-
-			 $("#incorrect").show(); 
-		}
-	}  	
-$('.Submit').click(function() {
-		checkSort();
-	});	
- $(function() { 
-     $( "#sortList" ).sortable({ containment: "window", tolerance:"pointer" }); 
- });
-}
-// ]]></script>
+            'afterFx': function() {
+                parent.$(".sort", frame).sortTabs({'noOfAttempts': 3, 'showCorrectAnswers': true, 'matchImgs': true, shuffle: false});
+            }
+        });
+    
+}    
+</script>
 </body>
 </html>

@@ -72,7 +72,7 @@
 <div class="whiteboxFeedback">
 <div id="correct" style="width: 300px; top: 200px; left: 115px;">
 <div title="Close" class="closeWindow">close<span></span></div>
-<span>Correct.</span> Everyone knows Marty is the hottest thing since slice bread.
+<span>Correct.</span> Everyone knows Marty is the hottest thing since sliced bread.
 </div>
 <div id="incorrect" style="width: 200px; top: 270px; left: 15px;">
 <div title="Close" class="closeWindow">close<span></span></div>
@@ -81,7 +81,7 @@
 <div id="attemptsOver" style="left: 270px; top: 100px; width: 260px;">
 <div class="closeWindow" title="Close">close<span></span></div>
 <span>You are out of attempts.</span><br />
-     You are listening to too much Joe Brolly. Everyone knows Marty is the hottest thing since slice bread.</span></div>
+     Don't mind Joe Brolly. Everyone knows Marty is the hottest thing since sliced bread.</span></div>
 </div>
 </div>
 <img id="bg" class="introFx fx1" alt="Sky above clouds." src="../../../media/bg_tri.jpg" width="675" height="390" />
@@ -89,6 +89,11 @@
 var activity = 1;
 if (parent.$) {
         var frame = parent.$("#myFrame").contents();
+    
+//        parent.$(".sort", frame).sortTabs({'noOfAttempts': 3, 'showCorrectAnswers': true, 'matchImgs': true});
+//        parent.$('.introFx', frame).introFx({'prevNavButtonDisable': true});
+    
+    
         parent.$('.introFx', frame).introFx({
             'afterFx': function() {
                 parent.$(".sort", frame).sortTabs({'noOfAttempts': 3, 'showCorrectAnswers': true, 'matchImgs': true});
