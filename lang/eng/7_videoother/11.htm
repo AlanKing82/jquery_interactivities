@@ -81,9 +81,13 @@ left:-20px;
 var activity = 1;
 if (parent.$) {
         var frame = parent.$("#myFrame").contents();
+    
+            parent.$('.introFx', frame).introFx({
+                'afterFx': function() {
+                    parent.$(".sort", frame).sortTabs({'noOfAttempts': 3 });	
+                }
+            });
 
-            parent.$(".sort", frame).sortTabs({'noOfAttempts': 3 });
-            parent.$('.introFx', frame).introFx({'prevNavButtonDisable': true});
 }    
 </script>
 </body>
