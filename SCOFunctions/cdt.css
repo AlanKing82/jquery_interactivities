@@ -1015,6 +1015,7 @@ div#sortWrap.sortWrapImg ul {
     display:block; 
     overflow:hidden;
     position:static; 
+    _width:100%; /* ie6 format on sort fix */
 }
 
 div#matchWrap ul li{ 

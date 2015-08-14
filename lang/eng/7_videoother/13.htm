@@ -27,21 +27,21 @@
 
     <div id="sortWrap" class="sortWrapImg">
         <ul id="sort-list">
-            <li class="sort">
-                <img  src="../../../media/industry01.jpg" />
-                <p>Retail</p>
+            <li class="sort" id="sort4">
+                <img  src="../../../media/industry04.jpg" />
+                <p>Agriculture</p>
             </li>
-            <li class="sort">
+            <li class="sort" id="sort2">
                 <img  src="../../../media/industry02.jpg" />
                 <p>Education</p>
             </li>
-            <li class="sort">
+            <li class="sort" id="sort1">
+                <img  src="../../../media/industry01.jpg" />
+                <p>Retail</p>
+            </li>
+            <li class="sort" id="sort3">
                 <img  src="../../../media/industry03.jpg" />
                 <p>Health Services</p>
-            </li>
-            <li class="sort">
-                <img  src="../../../media/industry04.jpg" />
-                <p>Agriculture</p>
             </li>
         </ul>
     </div>     
@@ -88,17 +88,12 @@ var activity = 1;
 if (parent.$) {
         var frame = parent.$("#myFrame").contents();
 
-//            parent.$(".sort", frame).sortTabs({'noOfAttempts': 3, 'showCorrectAnswers': true, 'matchImgs': true});
-//            parent.$('.introFx', frame).introFx({'prevNavButtonDisable': true});
-    
-            parent.$('.introFx', frame).introFx({
+    parent.$('.introFx', frame).introFx({
                 'afterFx': function() {
-                    parent.$(".sort", frame).sortTabs({'noOfAttempts': 3, 'showCorrectAnswers': true, 'matchImgs': true});
+                    parent.$(".sort", frame).sortTabs({'noOfAttempts': 3, 'showCorrectAnswers': true, 'matchImgs': true, shuffle: false});
                 }
             });
     
-//$("#sort-list").sortable({containment : $("#sort-list"), tolerance:"pointer"}); 
-
 }    
 </script>
 </body>

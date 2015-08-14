@@ -18,7 +18,7 @@
 <div class="boxContent" style="height: 323px;">
 <div class="t"></div>
 <h1 class="width50">5 Image sortables</h1>
-<p class="width65">Hottest man in Ireland. Match these ladeens to text.</p>
+<p class="width65">5 image template. img width 100px</p>
 <dl class="noteExpand expandMiddle" style="left: 380px; top: 10px; position: absolute; z-index: 3;">
 <div class="interact_img"></div>
 <dt>Interact</dt><dd>Sort them out. You have 3 attempts.</dd></dl>
@@ -26,35 +26,30 @@
 
 <div id="sortWrap" class="sortWrapImg">
         <ul id="sort-list">
-            <li class="sort">
-                <img  src="../../../media/hot01.png" />
-               
+            <li id="sort3" class="sort">
+                <img  src="../../../media/img03.png" />
             </li>
-            <li class="sort">
-                <img  src="../../../media/hot02.png" />
-               
+            <li id="sort2" class="sort">
+                <img  src="../../../media/img02.png" />
             </li>
-            <li class="sort">
-                <img  src="../../../media/hot04.png" />
-                
+            <li id="sort1" class="sort">
+                <img  src="../../../media/img01.png" />
             </li>
-            <li class="sort">
-                <img  src="../../../media/hot03.png" />
-               
+            <li id="sort5" class="sort">
+                <img  src="../../../media/img05.png" />
             </li>
-            <li class="sort">
-                <img  src="../../../media/hot05.png" />
-                
+            <li id="sort4" class="sort">
+                <img  src="../../../media/img04.png" />
             </li>
         </ul>
     </div>     
     <div id="matchWrap" class="sortWrapImg">    
         <ul id="match-list">
-            <li>Phwoarr!</li>
-            <li>Smokin</li>
-            <li>Red hot</li>
-            <li>Losing it</li>
-            <li>Gombeen</li>
+            <li>Img 01</li>
+            <li>Img 02</li>
+            <li>Img 03</li>
+            <li>Img 04</li>
+            <li>Img 05</li>
         </ul>
     </div> 
     <input class="btn"  id="sortSubmit" type="button" value="submit" /> 
@@ -91,13 +86,13 @@ var activity = 1;
 if (parent.$) {
         var frame = parent.$("#myFrame").contents();
     
-//        parent.$(".sort", frame).sortTabs({'noOfAttempts': 3, 'showCorrectAnswers': true, 'matchImgs': true});
-//        parent.$('.introFx', frame).introFx({'prevNavButtonDisable': true});
-    
-    
         parent.$('.introFx', frame).introFx({
             'afterFx': function() {
-                parent.$(".sort", frame).sortTabs({'noOfAttempts': 3, 'showCorrectAnswers': true, 'matchImgs': true});
+                parent.$(".sort", frame).sortTabs({'noOfAttempts': 3, 
+                                                   'showCorrectAnswers': true, 
+                                                   'matchImgs': true,  
+                                                   shuffle: false
+                                                  });
             }
         });
     
