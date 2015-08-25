@@ -6,12 +6,15 @@
 <meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <title>Drag and drop load scripts</title>
-<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201507061504_9d3cddc375ca68aec3d1075ae212591b" type="text/css" media="screen" /><script src="../../../SCOFunctions/jquery.min.js"></script>
-<script src="../../../SCOFunctions/jquery-ui.custom.min.js"></script>
-<script src="../../../SCOFunctions/jquery.ui.touch-punch.min.js"></script>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201507061504_9d3cddc375ca68aec3d1075ae212591b" type="text/css" media="screen" />
+
+
 </head>
 <body id="screenBody" onload="parent.onFrameLoad();">
 
+<script src="../../../SCOFunctions/jquery.min.js"></script>
+<script src="../../../SCOFunctions/jquery-ui.custom.min.js"></script>
+<script src="../../../SCOFunctions/jquery.ui.touch-punch.min.js"></script>
 
 <div class="introFx fx2 width100" id="whiteBoxWrap">
 <div class="whiteBox">
@@ -76,7 +79,9 @@
 </div>
 <div id="incorrect" style="width: 200px; top: 270px; left: 15px;">
 <div title="Close" class="closeWindow">close<span></span></div>
-<span>Incorrect.</span><br />Try again.</div>
+        <span>Incorrect.</span><br />Try again.
+        <span class="attemptText">Attempts remaining: </span>
+</div>
 
     <div id="attemptsOver" style="left: 320px; top: 250px; width: 300px;">
     <div class="closeWindow" title="Close">close<span></span></div>
@@ -90,10 +95,6 @@
 var activity = 1;
 if (parent.$) {
         var frame = parent.$("#myFrame").contents();
-    
-//        parent.$(".sort", frame).sortTabs({'noOfAttempts': 3, 'showCorrectAnswers': true, 'matchImgs': true});
-//        parent.$('.introFx', frame).introFx({'prevNavButtonDisable': true});
-    
     
         parent.$('.introFx', frame).introFx({
             'afterFx': function() {
