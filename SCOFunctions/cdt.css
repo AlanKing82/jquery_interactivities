@@ -1051,7 +1051,9 @@ div#sortWrap.sortWrapImg ul li p {
 }
 
 div#sortWrap.sortWrapImg ul li.itemCorrectStyle{ 
-    background-image:none;
+    background: #daeaef url(../common_images/tick_small.png) no-repeat;
+/*    background-position:98% 99%;*/
+/*    background-image:none;*/
     background-color: #daeaef;
     color:#000;
 }
