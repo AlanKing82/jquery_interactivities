@@ -5,265 +5,31 @@
 <meta http-equiv="Description" content="Online training course" />
 <meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<title>Drag and drop</title>
-<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201501201658_9d3cddc375ca68aec3d1075ae212591b" type="text/css" media="screen" />
-
-    
+<title>hotspot</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201507061504_9d3cddc375ca68aec3d1075ae212591b" type="text/css" media="screen" />
 </head>
 <body id="screenBody" onload="parent.onFrameLoad();">
 
-
 <script src="../../../SCOFunctions/jquery.min.js"></script>
-<script src="../../../SCOFunctions/jquery-ui.custom.min.js"></script>
-<script src="../../../SCOFunctions/jquery.ui.touch-punch.min.js"></script>
+<script src="../../../SCOFunctions/swfobject.js"></script>
+<script src="../../../SCOFunctions/froogaloop2.min.js"></script>
 
-
-
-<style>
-    
-
-
-ol.grid li {
-    /*width: 140px;*/
-    display: inline-block;
-    vertical-align: top;
-    *display: inline;
-    *zoom: 1;
-    padding:1px;
-    margin:2px;
-    border-radius: 10px;
-    overflow:hidden;
-}
-    
-ol.grid {
-    padding: 0px;
-    background-color:#fff;
-    opacity:0.9;
-    float: right;
-    color:#18404a;
-}
-    
-.grid50{width:49%;}
-    
-<!--
-/* Main content area */
- 
- #content {
-  margin: 0 auto; 
-  
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
-/*position:absolute;*/
-/*left:235px; */   
-    display:inline-block;
-    width:100%;
-    *width:100%;
-   /* top:0px;*/
-   
- 
-}
-    
-div#content span{
-    text-align: center;
-}
-    
-    
-#slots li.hovered {
-  background: #98bec8;
-}
- 
-/*
-#slots li:first-child, #pile li:first-child {
-  margin-left: 0;
-}
-*/
- 
-#slots li.hovered {
-  background: #98bec8;
-}
- 
-#slots li {
-    border: 1px solid #dbeaef;
-    font-size: 12px;
-    background:#dbeaef;
-}
-
-#pile li {
-  background: #dbeaef;
- 
-  font-size: 12px;
-  border: 1px solid #dbeaef;
-
-  /*line-height: 100%;*/
-
-}
-    
-#pile li span{
-    display:inline-block;
-}
-    
-
-
-
- 
-    
-#pile li span p, #slots li span p{
-    display:inline-block;
-    padding:5px;
-}
-    
-
-#pile li.ui-draggable-dragging {
-  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
-  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
-  box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
-    opacity:0.75;
-}
-    
-
-/* Individually coloured drops */
- #pile .correct { 
-    background: orange; 
-    border:1px solid #FFA500;
-    opacity:1.0;
-}
- 
-
-/* "You did it!" message */
-#correct {
-  position: absolute;
-  left: 180px;
-  top: 100px;
-  width: 0;
-  height: 0;
-  z-index: 100;
-  background-color: #E9EAEC;
-    
-/*
-  -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .5);
-  -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .5);
-  box-shadow: .3em .3em .5em rgba(0, 0, 0, .5);
-*/
-  padding: 20px;
-}
---></style>
-
-    
-<div id="whiteBoxWrap">
-<div class="whiteBox">
-<div class="boxContent">
-<div class="t"></div>
-<h1 class="width40">Drag and Drop plug-in</h1>
-<p>Match each of the 4 types of headwear described with the type of protection it provides.</p>
-    
-<div id="content">
-
-    <ol id="slots" class="grid grid50">
-        <li>
-            <span>
-                <p><strong>Protect against materials falling from a height</strong></p>
-            </span>
-        </li>
-        <li><span><p><strong>Protect from knocking against stationary objects</strong></p></span></li> 
-        <li><span><p><strong>Protect against entanglement or scalping</strong></p></span></li> 
-        <li><span><p><strong>Reduction in head injury if the user</strong></p></span></li> 
-
-    </ol>
-
-    <ol id="pile" class="grid grid50">
-        <li>
-            <span>
-                <img src="../../../media/drag_drop_01_small.png" />
-                <p><strong>Climbing hat</strong></p>
-            </span>
-        </li>
-        <li>
-            <span>
-                <img src="../../../media/drag_drop_02_small.png" />
-                <p><strong>Hard hat</strong></p>
-            </span>
-        </li> 
-        <li>
-            <span>
-                <img src="../../../media/drag_drop_03_small.png" />
-                <p><strong>Bump cap</strong></p>
-            </span>
-        </li> 
-        <li>
-            <span>
-                <img src="../../../media/drag_drop_04_small.png" />
-                <p><strong>Hair net</strong></p>
-            </span>
-        </li> 
-    </ol>
-
-</div>   
-   
-    
-
-
-    
+<div id="flashContainer">
+<div id="flashbox"></div>
 </div>
-<div class="b">
-<div></div>
-</div>
-</div>
-</div>
-    
-    <div class="whiteboxFeedback">
-        <div id="correct" class="rounded final_result">
-        <div title="Close" id="initialize" class="hotspotMinorCloseWindow">close<span></span></div>
-            <span>Well done</span>
-            <br />Please continue
-        </div>
-    </div>
-    
-    
-
-    
-
-<img width="675" height="390" title="An office worker with back pain." id="bg" src="../../../media/bg_tri.jpg" />
-    
+<iframe width="665" height="385" id="player1" src="//player.vimeo.com/video/62688256?api=1?api=1&amp;player_id=player1&amp;autoplay=0" frameborder="0" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe>
 <script type="text/javascript">// <![CDATA[
-    var activity = 1;
-    
+var activity = 1;
 
-    
-if (parent.$) {
+    if (parent.$) {
         var frame = parent.$("#myFrame").contents();
-        parent.$("#pile li", frame).dragAndDrop({'imgTabs': true});
-
-    
-    
-        parent.$("#bg, #whiteBoxWrap", frame).css({
-                                                   'position': 'absolute',
-                                                   'width':'100%'
-                                                   });
-
-        //not display causing format() to fail
-        parent.$("#bg, #whiteBoxWrap", frame).css({'display': 'none',
-                                                   'position': 'absolute',
-                                                   'width':'100%'
-                                                   });
-
-        parent.disable(true);
-        parent.$("#bg", frame).delay(800).fadeIn("slow", function(){
-        parent.$("#whiteBoxWrap", frame).slideDown("slow");
-        parent.toggleButton('prev', true);
-       
-       });
-
-}
+        var vimeoPlayer = parent.$('#player1', frame).vimeoAPI({'videoId': '62688256'});
+            vimeoPlayer.vimeoJsAPI();
+    }
+  
+// ]]></script>
 
 
 
-
-// ]]>
-</script>
-    
-
-    
-    
-    </body>
+</body>
 </html>

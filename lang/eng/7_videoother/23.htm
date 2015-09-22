@@ -11,27 +11,24 @@
 <body id="screenBody" onload="parent.onFrameLoad();">
 
 <script src="../../../SCOFunctions/jquery.min.js"></script>
-<script src="../../../SCOFunctions/swfobject.js"></script>
-<script src="../../../SCOFunctions/froogaloop2.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+<script src="https://secure-a.vimeocdn.com/js/froogaloop2.min.js"></script>
 
-<p id="timer">
-    <span class="status">&hellip;</span>
-    <span class="clickForward">Please click forward </span>
-    <span class="paused">Paused </span>
-</p>
 <div id="flashContainer">
 <div id="flashbox"></div>
 </div>
 <iframe width="665" height="385" id="player1" src="//player.vimeo.com/video/62688256?api=1?api=1&amp;player_id=player1&amp;autoplay=0" frameborder="0" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe>
 <script type="text/javascript">// <![CDATA[
+var activity = 1;
 
     if (parent.$) {
         var frame = parent.$("#myFrame").contents();
-        var vimeoPlayer = parent.$('#player1', frame).vimeoAPI({'videoId': '62688256', 'disableNextBtn': false});
+        var vimeoPlayer = parent.$('#player1', frame).vimeoAPI({'videoId': '62688256'});
             vimeoPlayer.vimeoJsAPI();
     }
   
 // ]]></script>
+
 
 </body>
 </html>
