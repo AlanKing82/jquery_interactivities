@@ -1052,21 +1052,10 @@ div#sortWrap.sortWrapImg ul li p {
 }
 
 div#sortWrap.sortWrapImg ul li.itemCorrectStyle{ 
-
-/*
-    background: #daeaef url(../common_images/tick_small.png) no-repeat;
-    background-position:98% 99%;
-*/
     background-image:none;
     background-color: #daeaef;
     color:#000;
 }
-
-/*
-div#sortWrap.sortWrapImg ul li.itemCorrectStyle img{
-    opacity: 0.6;
-} 
-*/
 
 div#sortWrap.sortWrapImg ul li.allCorrectStyle{
     background-image:none;
@@ -1078,13 +1067,8 @@ div#sortWrap.sortWrapImg ul li.allCorrectStyle{
 div#sortWrap.sortWrapImg ul li div.sortCorrectTick{
     background: url(../common_images/tick_small_img.png) no-repeat;
     position:absolute;
-    
     height:23px;
     width:23px;
-/*
-    height:15px;
-    width:22px;
-*/
     right:7px;
     bottom:20px;
 }
@@ -1146,19 +1130,6 @@ div#matchWrap.sortWrapText ul li
 .attemptText{
     display:none;
 }
-
-div.whiteboxFeedback .dragGrabIcon{
-    background: url(../common_images/drag_grab.gif) no-repeat;
-    width:28px;
-    height:7px;
-    top: 4px;
-    position: absolute;
-    left:45%;
-}
-
-div.whiteboxFeedback:hover .dragGrabIcon{
-    background: url(../common_images/drag_grab_hover.gif) no-repeat;
-} 
 
 /* Note small */
 .note {
