@@ -578,6 +578,35 @@ td.questionNumber
 	list-style-image:none;
 }
 
+/* multiquestion incorrect/correct feedback for more than two option columns */
+.optionsListCorrect{
+    background-color: #f2ffe9;
+    border-radius: 5px;
+}
+
+.optionsListIncorrect{
+    background-color: #ffe9e9;
+    border-radius: 5px;
+}
+
+.optionsListIncorrectImg,.optionsListCorrectImg{
+	height:21px;
+    width:21px;
+    z-index: 1;
+    position:absolute;
+    display:block;
+    margin-left: -6px;
+    left:0px;
+}
+
+.optionsListCorrectImg{
+    background-image:url(../common_images/tick_small.png);
+}
+
+.optionsListIncorrectImg{
+    background-image:url(../common_images/x_small.png);
+}
+
 .bulbs dd
 {
 	display:none;
@@ -1065,10 +1094,10 @@ div#sortWrap.sortWrapImg ul li.allCorrectStyle{
 
 /* Appended div to display tick above image */
 div#sortWrap.sortWrapImg ul li div.sortCorrectTick{
-    background: url(../common_images/tick_small_img.png) no-repeat;
+    background: url(../common_images/tick_small.png) no-repeat;
     position:absolute;
-    height:23px;
-    width:23px;
+    height:21px;
+    width:21px;
     right:7px;
     bottom:20px;
 }
@@ -2043,6 +2072,15 @@ display:inline;
 {
     padding:12px 16px 12px 16px;
 }
+
+#whiteBoxWrap .optionsList label {
+    padding: 1px;
+    background-color: #f1f6f9;
+    border-radius:5px;
+    font-weight:normal !important;
+}
+
+#whiteBoxWrap .optionsList label:hover { background-color: #e9f1f3;}
 
 /* Cannot select the background / #15598 */
 img#bg { z-index:-1; top:0px; }
