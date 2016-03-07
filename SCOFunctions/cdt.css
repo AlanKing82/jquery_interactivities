@@ -2068,6 +2068,11 @@ display:inline;
 	background-image:url(../common_images/correct2.gif)!important;
 }
 
+.whiteboxFeedback #incorrect.warning, .whiteboxFeedback #correct.warning
+{
+	background-image:url(../common_images/warning.png)!important;
+}
+
 .whiteboxFeedback #attemptsOver /* pop-up box if all attempts used */
 {
     padding:12px 16px 12px 16px;
