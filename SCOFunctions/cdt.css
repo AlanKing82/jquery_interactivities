@@ -2116,6 +2116,8 @@ img#bg { z-index:-1; top:0px; }
     position:absolute;
 }
 
+.inactive{display:none}
+
 /* general button styling */
 .btn {
   display: inline-block;

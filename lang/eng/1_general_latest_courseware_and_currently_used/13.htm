@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <meta http-equiv="Author" content="EssentialSkillz TM" />
+    <meta http-equiv="Description" content="Online training course" />
+    <meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>Checkboxes layout left - (Apr2015)</title>
+    <link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201507061504_9d3cddc375ca68aec3d1075ae212591b" type="text/css" media="screen" />
+</head>
+
+<body id="screenBody" onload="parent.onFrameLoad();">
+    <div class="width55 introFx fx2" id="whiteBoxWrap">
+        <div class="whiteBox">
+            <div class="boxContent">
+                <div class="t"></div>
+                <h1>Question</h1>
+<div id="questionSlider">
+    <div class="questionBox">
+           <h2>How many deaths are attributed to asbestos each day?</h2>
+            <ul>
+                <li>
+                    <input rel="incorrect" name="a" title="Click if this is true." id="answer1" class="answer" type="radio" />
+                    <label for="answer1">100</label>
+                </li>
+                <li>
+                    <input rel="correct" name="a" title="Click if this is true." id="answer2" class="answer" type="radio" />
+                    <label for="answer2">correct</label>
+                </li>
+                <li>
+                    <input rel="incorrect" name="a" title="Click if this is true." id="answer3" class="answer" type="radio" />
+                    <label for="answer3">300</label>
+                </li>
+                <li>
+                    <input rel="incorrect" name="a" title="Click if this is true." id="answer4" class="answer" type="radio" />
+                    <label for="answer4">2000</label>
+                </li>
+            </ul>
+    </div>
+    <div class="questionBox inactive">
+       <h2>How many deaths are attributed to asbestos each month? Two are correct</h2>
+        <ul>
+            <li>
+                <input rel="incorrect" name="b" title="Click if this is true." id="answer1" class="answer" type="checkbox" />
+                <label for="answer1">incorrect</label>
+            </li>
+            <li>
+                <input rel="correct" name="b" title="Click if this is true." id="answer2" class="answer" type="checkbox" />
+                <label for="answer2">correct</label>
+            </li>
+            <li>
+                <input rel="correct" name="b" title="Click if this is true." id="answer3" class="answer" type="checkbox" />
+                <label for="answer3">correct</label>
+            </li>
+            <li>
+                <input rel="incorrect" name="b" title="Click if this is true." id="answer4" class="answer" type="checkbox" />
+                <label for="answer4">2000</label>
+            </li>
+        </ul>
+    </div>
+        <div class="questionBox inactive">
+           <h2>How many deaths are attributed to asbestos each year?</h2>
+            <ul>
+                <li>
+                    <input rel="incorrect" name="a" title="Click if this is true." id="answer1" class="answer" type="radio" />
+                    <label for="answer1">100</label>
+                </li>
+                <li>
+                    <input rel="incorrect" name="a" title="Click if this is true." id="answer2" class="answer" type="radio" />
+                    <label for="answer2">mmm</label>
+                </li>
+                <li>
+                    <input rel="correct" name="a" title="Click if this is true." id="answer3" class="answer" type="radio" />
+                    <label for="answer3">correct</label>
+                </li>
+                <li>
+                    <input rel="incorrect" name="a" title="Click if this is true." id="answer4" class="answer" type="radio" />
+                    <label for="answer4">2000</label>
+                </li>
+            </ul>
+    </div>
+    
+    
+    <div class="questionResult inactive">
+        <p>You answered <span id="correctAnswers"></span> of <span id="questionCount"></span> questions correctly.</p>
+        
+        <p class="nextLessonMsg inactive">Please continue to next lesson.</p>
+        
+        <div class="redoLessonMsg inactive">
+            Please retake lesson<br><br>
+            <input class="btn" id="retakeLesson" value="Retake" type="button"/>
+        </div>
+    </div>
+    
+</div>
+                <div class="cleaner"></div>
+            </div>
+            <div class="b">
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <div class="whiteboxFeedback" style="left: 380px; top: 300px; width: 200px; position: absolute;">
+        <div class="final_result" id="correct">
+            <div title="Close" class="hotspotMinorCloseWindow">close<span></span>
+            </div>
+            <span>Correct.</span>
+            <br />Please continue.</div>
+        <div class="final_result" id="incorrect"><span>Incorrect.</span>
+            <br />Try again.</div>
+    </div>
+    <img src="../../../media/question_background.jpg" id="bg" class="introFx fx1" alt="A lit lightbulb." height="390" width="675" />
+    <script type="text/javascript">
+        // <![CDATA[
+        var activity = 1;
+        if (parent.$) {
+            var frame = parent.$("#myFrame").contents();
+            parent.$(".hotspotsMinor a", frame).hotspotMinor();
+            parent.$('.introFx', frame).introFx({
+                'afterFx': function() {
+                    parent.$(".questionBox", frame).questionSlider();
+                }
+            });
+        }
+         // ]]>
+    </script>
+</body>
+
+</html>
