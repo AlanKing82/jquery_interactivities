@@ -21,12 +21,20 @@
 </div>
 </div>
 </div>
-<img src="../../../media/bg_tri.jpg" id="bg" class="introFx fx1" alt="An office worker with back pain." height="390" width="675" />
+<div>
+    <p id="timer" class="timerStyle"></p>
+    <p class="inactive">Please click forward </p>
+</div>
+<img src="../../../media/bg_tri.jpg" id="bg" class="introFx fx1" alt="A user varying their posture by filing documents." height="390" width="675" />
 <script type="text/javascript">// <![CDATA[
 var activity = 1;
     if (parent.$) {
         var frame = parent.$("#myFrame").contents();
-        parent.$('.introFx', frame).introFx({});
+        parent.$('.introFx', frame).introFx({
+            'afterFx': function() {
+                parent.$("p#timer", frame).countdown({'minutes': 0, 'seconds': 01 });
+            }
+        });
     }
 // ]]></script></body>
 </html>

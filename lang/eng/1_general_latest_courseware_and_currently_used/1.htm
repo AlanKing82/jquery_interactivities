@@ -8,7 +8,8 @@
 <title>Introfx textbox left fade In - (Apr2015)</title>
 <link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201507061504_9d3cddc375ca68aec3d1075ae212591b" type="text/css" media="screen" />
 </head>
-<body id="screenBody" onload="parent.onFrameLoad();"><div class="introFx fx2 width50" id="whiteBoxWrap">
+<body id="screenBody" onload="parent.onFrameLoad();">
+<div class="introFx fx2 width50" id="whiteBoxWrap">
 <div class="whiteBox">
 <div class="boxContent">
 <div class="t"></div>
@@ -22,12 +23,21 @@
 </div>
 </div>
 </div>
-<img src="../../../media/bg_tri.jpg" id="bg" class="introFx fx1" alt="An office worker with back pain." height="390" width="675" />
+
+<div>
+<p id="timer" class="olderStyle"></p>
+<p class="inactive">Please click forward </p>
+</div>
+<img src="../../../media/scaffolding.jpg" id="bg" class="introFx fx1" alt="An office worker with back pain." />
 <script type="text/javascript">// <![CDATA[
 var activity = 1;
     if (parent.$) {
         var frame = parent.$("#myFrame").contents();
-        parent.$('.introFx', frame).introFx({});
+        parent.$('.introFx', frame).introFx({
+            'afterFx': function() {
+                parent.$("p#timer", frame).countdown({'minutes': 0, 'seconds': 02 });
+            }
+        });
     }
 // ]]></script></body>
 </html>
