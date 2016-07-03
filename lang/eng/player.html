@@ -17,7 +17,10 @@
 var assessmentLabel = 'Risk Assessment';
 var surveyLabel = 'Survey';
 $(document).ready(function(){
-	
+	window.EndOfLessonQuestion = {lessonNoArray: []}
+    
+    //window.EndOfLessonQuestion.lessonArray = [];
+    
     // make lesson frame transparent via javascript as W3C validator doesn't allow 'allowTransparency' atribute within iframe tag?!
 	$('#lessonFrame').attr( 'allowTransparency', 'true' );
     
