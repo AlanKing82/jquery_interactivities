@@ -2119,7 +2119,7 @@ img#bg { z-index:-1; top:0px; }
 .inactive{display:none}
 
 /* general button styling */
-.btn {
+.btn{
   display: inline-block;
   padding: 3px 14px;
   margin-bottom: 0;
@@ -2135,19 +2135,19 @@ img#bg { z-index:-1; top:0px; }
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
   background-image: none;
-  background-imcolor: #ddd;
+  background-color: #ddd;
   border: 1px solid transparent;
   border-radius: .5em;
   color: #555; 
+  text-decoration: none; 
 }
 	
 .btn:hover {
     background-color: #d7d7d7; 
 }
 
-/* Vimeo countdown timer */
+/* countdown timer */
 p#timer {
     color:#ff9933;
     font-family: Verdana, Arial, sans-serif;
@@ -2170,13 +2170,13 @@ p#timer .clickForward,
 p#timer .paused {
     display:none;
 }
-/* on img background */
+/* img background */
 p#timer.timerStyle{
     color:#fff;
     left:10px;
     padding:3px;
 }
-/* on white background */
+/* white background */
 p#timer.olderStyle{
     color:#777;
     background-color:transparent;
