@@ -546,6 +546,8 @@ table.optionsList { padding-left: 12px; }
 	width:99%;
 }
 
+.optionsList label:not(:first-child){text-align:center}
+
 td.questionNumber 
 {
 	vertical-align: top; 
@@ -585,14 +587,16 @@ td.questionNumber
     border-radius: 5px;
 }
 
-.optionsListCorrect, #whiteBoxWrap .optionsList label.optionsListCorrect{background-color: #f2ffe9}
 .optionsListIncorrect, #whiteBoxWrap .optionsList label.optionsListIncorrect{background-color: #ffe9e9}
-.optionsListReview, #whiteBoxWrap .optionsList label.optionsListReview{background-color: #dbfdc2;}
+.optionsListCorrect, #whiteBoxWrap .optionsList label.optionsListCorrect{background-color: #d8f6c9}
+.optionsListReview, #whiteBoxWrap .optionsList label.optionsListReview{background-color: #f69898;}
 
-.optionsListIncorrect{
-    background-color: #ffe9e9;
-    border-radius: 5px;
-}
+#whiteBoxWrap .optionsList label.optionsListCorrect:hover{background-color: #d8f6c9}
+#whiteBoxWrap .optionsList label.optionsListIncorrect.disabled{background-color: #f1f6f9; transition: background 1s ease-in-out;}
+
+#whiteBoxWrap .optionsList label.optionsListIncorrect.enabled:hover{background-color: #f6b7b7}
+#whiteBoxWrap .optionsList label.optionsListIncorrect.disabled:hover{background-color: #f1f6f9}
+
 
 .optionsListIncorrectImg,
 .optionsListCorrectImg,
@@ -606,12 +610,12 @@ td.questionNumber
     left:0px;
 }
 
-.optionsListCorrectImg{
-    background-image:url(../common_images/tick_small.png);
-}
-
 .optionsListIncorrectImg{
     background-image:url(../common_images/x_small.png);
+}
+
+.optionsListCorrectImg{
+    background-image:url(../common_images/tick_small.png);
 }
 
 .optionsListReviewImg{

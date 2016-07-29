@@ -16,10 +16,10 @@
         position:relative;
         float:right;
         margin:3px 3px 0px 0px;
-
+/*        padding-right:25px;*/
         visibility:visible;
         z-index: 1;
-
+/*        background: #ddd url(../../../common_images/tick_small.png) no-repeat 96%;*/
         background-size: 16px 16px;
         cursor:pointer;
     }
@@ -28,13 +28,13 @@
       opacity: 0.65; 
       cursor: not-allowed;
       padding-right:14px;
-
+/*      margin-right:14px;    */
       background: #ddd;
 }
     
     
     
-/* testing*/
+    /*    testing*/
 /*
     #whiteBoxWrap .optionsList label {
     padding: 1px;
@@ -160,7 +160,7 @@ input[type=checkbox]:checked + label.btn{
    
                             <tr>
                                 <th>
-                                    <label>Provide PPE that takes account of state </label>
+                                    <label>Provide PPE that takes account of state of health of wearer.</label>
                                 </th>
                              <th>
                                   <input name="a" title="Click if this is correct." class="answer quizAnscorrect" id="answer1" type="radio" alt="correct" />
@@ -174,22 +174,30 @@ input[type=checkbox]:checked + label.btn{
                                     <input name="a" title="Click if this is correct." class="answer" id="answer3" type="radio" alt="incorrect" />
                                     <label for="answer3" class="btn">None</label>
                                 </th>
+                                <th>
+                                    <input name="a" title="Click if this is correct." class="answer" id="answer4" type="radio" alt="incorrect" />
+                                    <label for="answer4" class="btn">None</label>
+                                </th>
                             </tr>
                             <tr>
                                 <th>
                                     <label>Maintain the PPE properly.</label>
                                 </th>
                                 <th>
-                                    <input name="b" title="Click if this is correct." class="answer" id="answer4" type="radio" alt="incorrect" />
-                                    <label for="answer4" class="btn">Employer</label>
-                                </th>
-                                <th>
                                     <input name="b" title="Click if this is correct." class="answer" id="answer5" type="radio" alt="incorrect" />
-                                    <label for="answer5" class="btn">Employees</label>
+                                    <label for="answer5" class="btn">Employer</label>
                                 </th>
                                 <th>
-                                    <input name="b" title="Click if this is correct." class="answer quizAnscorrect" id="answer6" type="radio" alt="correct" />
-                                    <label for="answer6" class="btn">Company</label>
+                                    <input name="b" title="Click if this is correct." class="answer" id="answer6" type="radio" alt="incorrect" />
+                                    <label for="answer6" class="btn">Employees</label>
+                                </th>
+                                <th>
+                                    <input name="b" title="Click if this is correct." class="answer quizAnscorrect" id="answer7" type="radio" alt="correct" />
+                                    <label for="answer7" class="btn">Company</label>
+                                </th>
+                                <th>
+                                    <input name="b" title="Click if this is correct." class="answer" id="answer8" type="radio" alt="incorrect" />
+                                    <label for="answer8" class="btn">this</label>
                                 </th>
                             </tr>
                             <tr>
@@ -197,16 +205,20 @@ input[type=checkbox]:checked + label.btn{
                                     <label>Provide PPE that is suitable for the task and hazards.</label>
                                 </th>
                                 <th>
-                                    <input name="c" title="Click if this is correct." class="answer quizAnscorrect" id="answer7" type="radio" alt="correct" />
-                                    <label for="answer7" class="btn">Employer</label>
+                                    <input name="c" title="Click if this is correct." class="answer quizAnscorrect" id="answer9" type="radio" alt="correct" />
+                                    <label for="answer9" class="btn">Employer</label>
                                 </th>
                                 <th>
-                                    <input name="c" title="Click if this is correct." class="answer" id="answer8" type="radio" alt="incorrect" />
-                                    <label for="answer8" class="btn">Employee</label>
+                                    <input name="c" title="Click if this is correct." class="answer" id="answer10" type="radio" alt="incorrect" />
+                                    <label for="answer10" class="btn">Employee</label>
                                 </th>
                                 <th>
-                                    <input name="c" title="Click if this is correct." class="answer" id="answer9" type="radio" alt="incorrect" />
-                                    <label for="answer9" class="btn">Both</label>
+                                    <input name="c" title="Click if this is correct." class="answer" id="answer11" type="radio" alt="incorrect" />
+                                    <label for="answer11" class="btn">Both</label>
+                                </th>
+                                <th>
+                                    <input name="c" title="Click if this is correct." class="answer" id="answer12" type="radio" alt="incorrect" />
+                                    <label for="answer12" class="btn">Both</label>
                                 </th>
                             </tr>
                             <tr>
@@ -214,35 +226,23 @@ input[type=checkbox]:checked + label.btn{
                                     <label>Store PPE properly after use.</label>
                                 </th>
                                 <th>
-                                    <input name="d" title="Click if this is correct." class="answer" id="answer10" type="radio" alt="incorrect" />
-                                    <label for="answer10" class="btn">Employers</label>
+                                    <input name="d" title="Click if this is correct." class="answer" id="answer13" type="radio" alt="incorrect" />
+                                    <label for="answer13" class="btn">Employers</label>
                                 </th>
                                 <th>
-                                    <input name="d" title="Click if this is correct." class="answer quizAnscorrect" id="answer11" type="radio" alt="correct" />
-                                    <label for="answer11" class="btn">Employee</label>
-                                </th>
-                                <th>
-                                    <input name="d" title="Click if this is correct." class="answer" id="answer12" type="radio" alt="incorrect" />
-                                     <label for="answer12" class="btn">Both</label>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <label>Inspect PPE before and after use.</label>
-                                </th>
-                                <th>
-                                    <input name="e" title="Click if this is correct." class="answer" id="answer13" type="radio" alt="incorrect" />
-                                    <label for="answer13" class="btn">Organisation</label>
-                                </th>
-                                <th>
-                                    <input name="e" title="Click if this is correct." class="answer quizAnscorrect" id="answer14" type="radio" alt="correct" />
+                                    <input name="d" title="Click if this is correct." class="answer quizAnscorrect" id="answer14" type="radio" alt="correct" />
                                     <label for="answer14" class="btn">Employee</label>
                                 </th>
                                 <th>
-                                    <input name="e" title="Click if this is correct." class="answer" id="answer15" type="radio" alt="incorrect" />
-                                    <label for="answer15" class="btn">Both</label>
+                                    <input name="d" title="Click if this is correct." class="answer" id="answer15" type="radio" alt="incorrect" />
+                                     <label for="answer15" class="btn">Both</label>
+                                </th>
+                                <th>
+                                    <input name="d" title="Click if this is correct." class="answer" id="answer16" type="radio" alt="incorrect" />
+                                     <label for="answer16" class="btn">Both</label>
                                 </th>
                             </tr>
+
                         </tbody>
                     </table>
                     <input class="btn" id="questionSubmit" value="submit" type="button" disabled/>
@@ -284,7 +284,7 @@ input[type=checkbox]:checked + label.btn{
             parent.$('.introFx', frame).introFx({
                 'afterFx': function() {
                     parent.$(".answer", frame).multiquestions({
-                        'answersCount': '5',
+                        'answersCount': '4',
                         'mustBeCorrect': true,
                         'submit': true,
                         'noOfAttempts': 3,

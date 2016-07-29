@@ -16,134 +16,23 @@
         position:relative;
         float:right;
         margin:3px 3px 0px 0px;
-
+/*        padding-right:25px;*/
         visibility:visible;
         z-index: 1;
-
+/*        background: #ddd url(../../../common_images/tick_small.png) no-repeat 96%;*/
         background-size: 16px 16px;
         cursor:pointer;
     }
 
-.btn#questionSubmit:disabled{
+    .btn#questionSubmit:disabled{
       opacity: 0.65; 
       cursor: not-allowed;
       padding-right:14px;
-
+/*      margin-right:14px;    */
       background: #ddd;
-}
     
-    
-    
-/* testing*/
-/*
-    #whiteBoxWrap .optionsList label {
-    padding: 1px;
-    background-color: transparent;
-    border-radius: 5px;
-    font-weight: normal !important;
-    }
-*/
-    
-    
-/*    input[type=radio]{display:none;}*/
-
-/*ie8 fix*/
-input[type=radio]{filter:Alpha(opacity=0); position:absolute}
-    
-input[type=radio] + label.btn{ 
-    padding: 5px 10px;
-/*    margin: 5px 10px;*/
-    display: inline-block;
-/*    text-transform: uppercase;*/
-    font-weight: 700;
-    outline: none;
-    position: relative;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    background: #cb4e4e;
-/*    color: #fff;*/
-/*    box-shadow: 0 2px #ab3c3c;*/
-   
-    box-shadow: 0 2px #c0d1dc;
-    -webkit-transition: none;
-    -moz-transition: none;
-    transition: none;
-/*    border: 1px solid #e6e6e6;*/
-/*    border-radius: 5px;*/
-    cursor: pointer;
     }
     
-/*
-input[type=checkbox] + label.btn{
-    padding: 5px 10px;
-    margin: 5px 10px;
-    display: inline-block;
-    text-transform: uppercase;
-    font-weight: 700;
-    outline: none;
-    position: relative;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    background: #cb4e4e;
-    color: #fff;
-    box-shadow: 0 3px #ab3c3c;
-    -webkit-transition: none;
-    -moz-transition: none;
-    transition: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-*/
-    
-input[type=radio] + label.btn:hover{
-/*    box-shadow: 0 2px #ab3c3c;*/
-    box-shadow: 0 2px #abc3d1;
-    top: 1px;
-}
-
-input[type=radio]:checked + label.btn{
-    box-shadow: 0 0 #ab3c3c;
-    top: 3px;
-}
-    
-input[type=radio] + label.btn.enabled{
-    box-shadow: 0 2px #cf7373;
-}
-    
-input[type=radio]:checked  + label.btn.enabled{
-    box-shadow: 0 0 #cf7373;
-}
-    
-
-    
-input[type=radio] + label.btn.disabled{
-    box-shadow: 0 0;
-    top: 2px;
-}
-    
-input[type=radio] + label.btn.disabled{
-    box-shadow: 0 0;
-    top: 2px;
-}
-    
-
-    
-
-
-/*
-input[type=checkbox] + label.btn:hover{
-    box-shadow: 0 2px #ab3c3c;
-    top: 1px;
-}
-
-input[type=checkbox]:checked + label.btn{
-    box-shadow: 0 0 #ab3c3c;
-    top: 2px;
-}
-*/
 
 </style>
 
@@ -151,28 +40,35 @@ input[type=checkbox]:checked + label.btn{
         <div class="whiteBox">
             <div class="boxContent">
                 <div class="t"></div>
-                <h1 class="width80">Select buttons test</h1>
-                <p class="width95">IE8 not co-operating? needs better styling (button pressed/disabled state)
-                    <br />Removed label headers to provide more spacing for submit button, customisable text for each button. better for touch devices. </p>
+                <h1 class="width80">3 column with submit</h1>
+                <p class="width95">This is current 3 column version. The showResultFeedback (colours/tick x) feedback is currently enabled as default for 3 columns or more? This is with the submit button and unlimited attempts</p>
                 <div class="ulDesc">
                     <table class="optionsList width100">
                         <tbody>
-   
+                            <tr>
+                                <th></th>
+                                <th>
+                                    <label>Employer</label>
+                                </th>
+                                <th>
+                                    <label>Employee</label>
+                                </th>
+                                <th>
+                                    <label>Both</label>
+                                </th>
+                            </tr>
                             <tr>
                                 <th>
-                                    <label>Provide PPE that takes account of state </label>
+                                    <label>Provide PPE that takes account of state of health of wearer.</label>
                                 </th>
                              <th>
                                   <input name="a" title="Click if this is correct." class="answer quizAnscorrect" id="answer1" type="radio" alt="correct" />
-                                  <label for="answer1" class="btn">Employer</label>
                              </th>
                                 <th>
                                 <input name="a" title="Click if this is correct." class="answer" id="answer2" type="radio" alt="incorrect" />
-                                <label for="answer2" class="btn">Employee</label>
                                </th>
                                 <th>
                                     <input name="a" title="Click if this is correct." class="answer" id="answer3" type="radio" alt="incorrect" />
-                                    <label for="answer3" class="btn">None</label>
                                 </th>
                             </tr>
                             <tr>
@@ -181,15 +77,12 @@ input[type=checkbox]:checked + label.btn{
                                 </th>
                                 <th>
                                     <input name="b" title="Click if this is correct." class="answer" id="answer4" type="radio" alt="incorrect" />
-                                    <label for="answer4" class="btn">Employer</label>
                                 </th>
                                 <th>
                                     <input name="b" title="Click if this is correct." class="answer" id="answer5" type="radio" alt="incorrect" />
-                                    <label for="answer5" class="btn">Employees</label>
                                 </th>
                                 <th>
                                     <input name="b" title="Click if this is correct." class="answer quizAnscorrect" id="answer6" type="radio" alt="correct" />
-                                    <label for="answer6" class="btn">Company</label>
                                 </th>
                             </tr>
                             <tr>
@@ -198,15 +91,12 @@ input[type=checkbox]:checked + label.btn{
                                 </th>
                                 <th>
                                     <input name="c" title="Click if this is correct." class="answer quizAnscorrect" id="answer7" type="radio" alt="correct" />
-                                    <label for="answer7" class="btn">Employer</label>
                                 </th>
                                 <th>
                                     <input name="c" title="Click if this is correct." class="answer" id="answer8" type="radio" alt="incorrect" />
-                                    <label for="answer8" class="btn">Employee</label>
                                 </th>
                                 <th>
                                     <input name="c" title="Click if this is correct." class="answer" id="answer9" type="radio" alt="incorrect" />
-                                    <label for="answer9" class="btn">Both</label>
                                 </th>
                             </tr>
                             <tr>
@@ -215,15 +105,12 @@ input[type=checkbox]:checked + label.btn{
                                 </th>
                                 <th>
                                     <input name="d" title="Click if this is correct." class="answer" id="answer10" type="radio" alt="incorrect" />
-                                    <label for="answer10" class="btn">Employers</label>
                                 </th>
                                 <th>
                                     <input name="d" title="Click if this is correct." class="answer quizAnscorrect" id="answer11" type="radio" alt="correct" />
-                                    <label for="answer11" class="btn">Employee</label>
                                 </th>
                                 <th>
                                     <input name="d" title="Click if this is correct." class="answer" id="answer12" type="radio" alt="incorrect" />
-                                     <label for="answer12" class="btn">Both</label>
                                 </th>
                             </tr>
                             <tr>
@@ -232,15 +119,12 @@ input[type=checkbox]:checked + label.btn{
                                 </th>
                                 <th>
                                     <input name="e" title="Click if this is correct." class="answer" id="answer13" type="radio" alt="incorrect" />
-                                    <label for="answer13" class="btn">Organisation</label>
                                 </th>
                                 <th>
                                     <input name="e" title="Click if this is correct." class="answer quizAnscorrect" id="answer14" type="radio" alt="correct" />
-                                    <label for="answer14" class="btn">Employee</label>
                                 </th>
                                 <th>
                                     <input name="e" title="Click if this is correct." class="answer" id="answer15" type="radio" alt="incorrect" />
-                                    <label for="answer15" class="btn">Both</label>
                                 </th>
                             </tr>
                         </tbody>
@@ -264,15 +148,7 @@ input[type=checkbox]:checked + label.btn{
             <div title="Close" class="closeWindow">close<span></span>
             </div>
             <span>Incorrect.</span> 
-            <br />Try again.
-        </div>
-        <div id="attemptsOver" style="left: 20px; top: 20px; width: 300px;">
-            <div class="closeWindow" title="Close">close<span></span>
-            </div>
-            <span>You are out of attempts.</span>
-            <br />If you apply these steps when you are using resources, you will go a long way to helping make the workplace more resource efficient.
-            <br /><span>Please review screen for correct answers.</span>
-        </div>
+            <br />Try again.</div>
     </div>
     <img width="675" height="390" class="introFx fx1" id="bg" alt="A warehouse with boxes in it." src="../../../media/bg_tri.jpg" />
     <script type="text/javascript">
@@ -286,9 +162,7 @@ input[type=checkbox]:checked + label.btn{
                     parent.$(".answer", frame).multiquestions({
                         'answersCount': '5',
                         'mustBeCorrect': true,
-                        'submit': true,
-                        'noOfAttempts': 3,
-                        'buttonTab': true
+                        'submit': true
                     });
                 }
             });
