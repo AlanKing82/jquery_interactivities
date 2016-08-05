@@ -1,67 +1,154 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
 <head>
-<meta http-equiv="Author" content="EssentialSkillz TM" />
-<meta http-equiv="Description" content="Online training course" />
-<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<title>Multiquestions  - (Apr2015)</title>
-<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201507061504_9d3cddc375ca68aec3d1075ae212591b" type="text/css" media="screen" />
-<style type="text/css"><!--
-#whiteBoxWrap .optionsList label {
-    padding: 1px;
-    background-color: #f1f6f9;
-    border-radius:5px;
-    font-weight:normal !important;}
-.optionsList label:hover { background-color: #e9f1f3;}
-}
---></style></head>
-<body id="screenBody" onload="parent.onFrameLoad();">
-<div class="introFx fx2  width60" id="whiteBoxWrap">
-<div class="whiteBox">
-<div class="boxContent">
-<div class="t"></div>
-<h1 class="width80">Test your knowledge</h1>
-<p>Which of the following areas should a risk assessment cover? <br />Select the Yes or No option for each statement. ans:yyyyyny</p>
-<div class="ulDesc">
-<table class="optionsList width100">
-<tbody>
-<tr><th></th><th><label>Yes</label></th><th><label>No</label></th></tr>
-<tr><th><label>The workplace areas and tasks assessed.</label></th><th><input name="a" title="Click if this is true." class="answer" id="answer1" alt="correct" type="radio" /></th><th><input name="a" title="Click if this is false." class="answer" id="answer1" alt="incorrect" type="radio" /></th></tr>
-<tr><th><label>The hazards found.</label></th><th><input name="b" title="Click if this is true." class="answer" id="answer2" alt="correct" type="radio" /></th><th><input name="b" title="Click if this is false." class="answer" id="answer2" alt="incorrect" type="radio" /></th></tr>
-<tr><th><label>The likely risk from the hazards.</label></th><th><input name="c" title="Click if this is true." class="answer" id="answer3" alt="correct" type="radio" /></th><th><input name="c" title="Click if this is false." class="answer" id="answer3" alt="incorrect" type="radio" /></th></tr>
-<tr><th><label>The people at risk.</label></th><th><input name="d" title="Click if this is true." class="answer" id="answer4" alt="correct" type="radio" /></th><th><input name="d" title="Click if this is false." class="answer" id="answer4" alt="incorrect" type="radio" /></th></tr>
-<tr><th><label>The budget in place for health and safety matters.</label></th><th><input name="e" title="Click if this is true." class="answer" id="answer5" alt="incorrect" type="radio" /></th><th><input name="e" title="Click if this is false." class="answer" id="answer5" alt="correct" type="radio" /></th></tr>
-<tr><th><label>The controls put in place to manage the risks.</label></th><th><input name="f" title="Click if this is true." class="answer" id="answer6" alt="correct" type="radio" /></th><th><input name="f" title="Click if this is false." class="answer" id="answer6" alt="incorrect" type="radio" /></th></tr>
-</tbody>
-</table>
-<div class="cleaner"></div>
-</div>
-</div>
-<div class="b">
-<div></div>
-</div>
-</div>
-</div>
-<div class="whiteboxFeedback" style="left: 418px; top: 250px; width: 240px; position: absolute;">
-<div class="final_result" id="correct">
-<div title="Close" class="hotspotMinorCloseWindow">close<span></span></div>
-<span>Correct.</span><br /> It is also useful to include your risk assessment document in your Health and Safety Policy document.</div>
-<div class="final_result" id="incorrect">
-<div title="Close" class="hotspotMinorCloseWindow">close<span></span></div>
-<span>Incorrect.</span><br /> Try again.</div>
-</div>
-<img class="introFx fx1" id="bg" alt="A warehouse with boxes in it." src="../../../media/bg_tri.jpg" height="390" width="675" />
-<script type="text/javascript">// <![CDATA[
-var activity = 1;
-if (parent.$) {
-        var frame = parent.$("#myFrame").contents();
-parent.$(".hotspotsMinor a", frame).hotspotMinor();
-        parent.$('.introFx', frame).introFx({
-        'afterFx': function() {
-            parent.$(".answer", frame).multiquestions({'answersCount':'6', 'mustBeCorrect': true}); 
+    <meta http-equiv="Author" content="EssentialSkillz TM" />
+    <meta http-equiv="Description" content="Online training course" />
+    <meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>Multiquestions - (Apr2015)</title>
+    <link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201507061504_9d3cddc375ca68aec3d1075ae212591b" type="text/css" media="screen" />
+    <style type="text/css">
+        <!-- #whiteBoxWrap .optionsList label {
+            padding: 1px;
+            background-color: #f1f6f9;
+            border-radius: 5px;
+            font-weight: normal !important;
         }
-    });
-}
-// ]]></script></body>
+        .optionsList label:hover {
+            background-color: #e9f1f3;
+        }
+    }
+    -->
+    </style>
+</head>
+
+<body id="screenBody" onload="parent.onFrameLoad();">
+    <div class="introFx fx2  width60" id="whiteBoxWrap">
+        <div class="whiteBox">
+            <div class="boxContent">
+                <div class="t"></div>
+                <h1 class="width80">Test your knowledge</h1>
+                <p>Which of the following areas should a risk assessment cover?
+                    <br />Select the Yes or No option for each statement. ans:yyyyyny</p>
+                <div class="ulDesc">
+                    <table class="optionsList width100">
+                        <tbody>
+                            <tr>
+                                <th></th>
+                                <th>
+                                    <label>Yes</label>
+                                </th>
+                                <th>
+                                    <label>No</label>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label>The workplace areas and tasks assessed.</label>
+                                </th>
+                                <th>
+                                    <input name="a" title="Click if this is true." class="answer" id="answer1" alt="correct" type="radio" />
+                                </th>
+                                <th>
+                                    <input name="a" title="Click if this is false." class="answer" id="answer1" alt="incorrect" type="radio" />
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label>The hazards found.</label>
+                                </th>
+                                <th>
+                                    <input name="b" title="Click if this is true." class="answer" id="answer2" alt="correct" type="radio" />
+                                </th>
+                                <th>
+                                    <input name="b" title="Click if this is false." class="answer" id="answer2" alt="incorrect" type="radio" />
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label>The likely risk from the hazards.</label>
+                                </th>
+                                <th>
+                                    <input name="c" title="Click if this is true." class="answer" id="answer3" alt="correct" type="radio" />
+                                </th>
+                                <th>
+                                    <input name="c" title="Click if this is false." class="answer" id="answer3" alt="incorrect" type="radio" />
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label>The people at risk.</label>
+                                </th>
+                                <th>
+                                    <input name="d" title="Click if this is true." class="answer" id="answer4" alt="correct" type="radio" />
+                                </th>
+                                <th>
+                                    <input name="d" title="Click if this is false." class="answer" id="answer4" alt="incorrect" type="radio" />
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label>The budget in place for health and safety matters.</label>
+                                </th>
+                                <th>
+                                    <input name="e" title="Click if this is true." class="answer" id="answer5" alt="incorrect" type="radio" />
+                                </th>
+                                <th>
+                                    <input name="e" title="Click if this is false." class="answer" id="answer5" alt="correct" type="radio" />
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label>The controls put in place to manage the risks.</label>
+                                </th>
+                                <th>
+                                    <input name="f" title="Click if this is true." class="answer" id="answer6" alt="correct" type="radio" />
+                                </th>
+                                <th>
+                                    <input name="f" title="Click if this is false." class="answer" id="answer6" alt="incorrect" type="radio" />
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="cleaner"></div>
+                </div>
+            </div>
+            <div class="b">
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <div class="whiteboxFeedback" style="left: 418px; top: 250px; width: 240px; position: absolute;">
+        <div class="final_result" id="correct">
+            <div title="Close" class="hotspotMinorCloseWindow">close<span></span>
+            </div>
+            <span>Correct.</span>
+            <br />It is also useful to include your risk assessment document in your Health and Safety Policy document.</div>
+        <div class="final_result" id="incorrect">
+            <div title="Close" class="hotspotMinorCloseWindow">close<span></span>
+            </div>
+            <span>Incorrect.</span>
+            <br />Try again.</div>
+    </div>
+    <img class="introFx fx1" id="bg" alt="A warehouse with boxes in it." src="../../../media/bg_tri.jpg" height="390" width="675" />
+    <script type="text/javascript">
+        // <![CDATA[
+        var activity = 1;
+        if (parent.$) {
+            var frame = parent.$("#myFrame").contents();
+            parent.$(".hotspotsMinor a", frame).hotspotMinor();
+            parent.$('.introFx', frame).introFx({
+                'afterFx': function() {
+                    parent.$(".answer", frame).multiquestions({
+                        'answersCount': '6',
+                        'mustBeCorrect': true
+                    });
+                }
+            });
+        }
+         // ]]>
+    </script>
+</body>
+
 </html>

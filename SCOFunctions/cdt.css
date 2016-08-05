@@ -527,10 +527,9 @@ ul
 	padding-left: 16px;
 }
 
-.optionsList
-{
-	margin:1em 0 0;
-}
+.optionsList{margin:1em 0 0}
+.optionsList.selectLabels{margin:0}
+.optionsList .labelImg{float:none}
 
 table.optionsList { padding-left: 12px; }
 
@@ -581,21 +580,52 @@ td.questionNumber
 }
 
 /* multiquestion incorrect/correct feedback for more than two option columns */
+.selectLabels input{position:absolute}
+
+input + label.btn.ie8Select{border:1px solid #666\9; }
+
+input + label.btn{ 
+    position: relative;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+    box-shadow: 0 2px #c0d1dc;
+    cursor: pointer;
+}
+    
+input + label.btn:hover{
+    box-shadow: 0 2px #abc3d1;
+    top: 1px;
+}
+
+input:checked + label.btn{
+    box-shadow: 0 0;
+    top: 3px;
+    cursor: default;
+}
+
+input[checked=checked] + label.btn{
+    background:red;
+    border:1px solid green;
+}
+
+input + label.btn.disabled{
+    box-shadow: 0 0;
+    top: 2px;
+    cursor: default;
+}
 .optionsListCorrect,
 .optionsListIncorrect,
 .optionsListReview{
     border-radius: 5px;
 }
 
-.optionsListIncorrect, #whiteBoxWrap .optionsList label.optionsListIncorrect{background-color: #ffe9e9}
-.optionsListCorrect, #whiteBoxWrap .optionsList label.optionsListCorrect{background-color: #d8f6c9}
-.optionsListReview, #whiteBoxWrap .optionsList label.optionsListReview{background-color: #f69898;}
-
-#whiteBoxWrap .optionsList label.optionsListCorrect:hover{background-color: #d8f6c9}
-#whiteBoxWrap .optionsList label.optionsListIncorrect.disabled{background-color: #f1f6f9; transition: background 1s ease-in-out;}
-
-#whiteBoxWrap .optionsList label.optionsListIncorrect.enabled:hover{background-color: #f6b7b7}
-#whiteBoxWrap .optionsList label.optionsListIncorrect.disabled:hover{background-color: #f1f6f9}
+.optionsListIncorrect, #whiteBoxWrap .optionsList label.optionsListIncorrect{background-color: #ffe9e9; transition: background 1s ease-in-out;}
+.optionsListReview, #whiteBoxWrap .optionsList label.optionsListReview{background-color: #f69898; transition: background 1s ease-in-out;}
+.optionsListCorrect, #whiteBoxWrap .optionsList label.optionsListCorrect{background-color: #d8f6c9;}
+.optionsListCorrect:hover, #whiteBoxWrap .optionsList label.optionsListCorrect:hover{background-color: #d8f6c9}
+.optionsListIncorrect:hover, #whiteBoxWrap .optionsList label.optionsListIncorrect:hover{background-color: #ffe9e9}
+.optionsListReview:hover, #whiteBoxWrap .optionsList label.optionsListIncorrect.optionsListReview:hover{background-color: #f69898;}
 
 
 .optionsListIncorrectImg,
@@ -2162,6 +2192,24 @@ img#bg { z-index:-1; top:0px; }
     background-color: #d7d7d7; 
 }
 
+/* question submit button */
+.btn#questionSubmit {
+        position:relative;
+        float:right;
+        margin:3px 3px 0px 0px;
+        visibility:visible;
+        z-index: 1;
+        background-size: 16px 16px;
+        cursor:pointer;
+    }
+
+.btn#questionSubmit:disabled{
+      opacity: 0.65; 
+      cursor: not-allowed;
+      padding-right:14px;
+      background: #ddd;
+}
+
 /* countdown timer */
 p#timer {
     color:#ff9933;
@@ -2199,4 +2247,6 @@ p#timer.olderStyle{
     top:360px;
     left:20px;
 }
+
+
 

@@ -192,11 +192,11 @@ input[type=checkbox]:checked + label.btn{
                                     <label for="answer6" class="btn">Employees</label>
                                 </th>
                                 <th>
-                                    <input name="b" title="Click if this is correct." class="answer quizAnscorrect" id="answer7" type="radio" alt="correct" />
+                                    <input name="b" title="Click if this is correct." class="answer" id="answer7" type="radio" alt="incorrect" />
                                     <label for="answer7" class="btn">Company</label>
                                 </th>
                                 <th>
-                                    <input name="b" title="Click if this is correct." class="answer" id="answer8" type="radio" alt="incorrect" />
+                                    <input name="b" title="Click if this is correct." class="answer quizAnscorrect" id="answer8" type="radio" alt="correct" />
                                     <label for="answer8" class="btn">this</label>
                                 </th>
                             </tr>
@@ -245,7 +245,7 @@ input[type=checkbox]:checked + label.btn{
 
                         </tbody>
                     </table>
-                    <input class="btn" id="questionSubmit" value="submit" type="button" disabled/>
+<!--                    <input class="btn" id="questionSubmit" value="submit" type="button" disabled/>-->
                     <div class="cleaner"></div>
                 </div>
             </div>
@@ -286,8 +286,6 @@ input[type=checkbox]:checked + label.btn{
                     parent.$(".answer", frame).multiquestions({
                         'answersCount': '4',
                         'mustBeCorrect': true,
-                        'submit': true,
-                        'noOfAttempts': 3,
                         'buttonTab': true
                     });
                 }
